@@ -1,0 +1,8 @@
+--swiftversion 5.3
+--header "\nMy Kindergarten\nCopyright © {created.year} Vladislav Zhivaev HxH. All rights reserved.\n//"
+--maxwidth 140
+--wraparguments before-first
+--wrapcollections before-first
+--lifecycle viewDidLoad,viewWillAppear,viewDidAppear,viewDidDisappear,viewWillDisappear
+--enable isEmpty,organizeDeclarations,markTypes
+--exclude MyKindergarten/Generated

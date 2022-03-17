@@ -1,8 +1,6 @@
 //
-//  AppDelegate.swift
-//  MyKindergarten
-//
-//  Created by Headdds and hands on 17.03.2022.
+// My Kindergarten
+// Copyright © 2022 Vladislav Zhivaev HxH. All rights reserved.
 //
 
 import UIKit

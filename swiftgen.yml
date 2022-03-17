@@ -1,5 +1,5 @@
 input_dir: MyKindergarten/Resources
-output_dir: MyKindergarten/Resources/Generated
+output_dir: MyKindergarten
 xcassets:
     inputs: Assets.xcassets
     outputs:

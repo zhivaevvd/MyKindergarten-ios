@@ -1,0 +1,32 @@
+{
+  "pins" : [
+    {
+      "identity" : "auto-layout-sugar-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Heads-and-Hands/auto-layout-sugar-ios.git",
+      "state" : {
+        "revision" : "1b57b50cf4e6b7715634df41a565b6d94637ca3d",
+        "version" : "1.0.6"
+      }
+    },
+    {
+      "identity" : "keyboardmanager",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/alphatroya/KeyboardManager.git",
+      "state" : {
+        "revision" : "110b1abb66a5ce4c4b6fc8c8c9ab65c8d9db70d2",
+        "version" : "1.6.1"
+      }
+    },
+    {
+      "identity" : "ttgsnackbar",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/zekunyan/TTGSnackbar.git",
+      "state" : {
+        "revision" : "9ece9ac0d754dcb7e84fd71c0ad6ee7164b20673",
+        "version" : "1.10.7"
+      }
+    }
+  ],
+  "version" : 2
+}
