@@ -15,6 +15,7 @@
 		C2D38BAF27E3D9BB0020938F /* AutoLayoutSugar in Frameworks */ = {isa = PBXBuildFile; productRef = C2D38BAE27E3D9BB0020938F /* AutoLayoutSugar */; };
 		C2D38BB227E3DA130020938F /* KeyboardManager in Frameworks */ = {isa = PBXBuildFile; productRef = C2D38BB127E3DA130020938F /* KeyboardManager */; };
 		C2D38BB427E3DA2D0020938F /* AuthVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D38BB327E3DA2D0020938F /* AuthVM.swift */; };
+		C2D38BBA27E3E99A0020938F /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D38BB927E3E99A0020938F /* Assets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		C28B794327E3C48A00824C1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C28B794B27E3C89A00824C1C /* AuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
 		C2D38BB327E3DA2D0020938F /* AuthVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVM.swift; sourceTree = "<group>"; };
+		C2D38BB927E3E99A0020938F /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		C2D38BA627E3CD2E0020938F /* Generated */ = {
 			isa = PBXGroup;
 			children = (
+				C2D38BB927E3E99A0020938F /* Assets.swift */,
 			);
 			path = Generated;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 			files = (
 				C2D38BB427E3DA2D0020938F /* AuthVM.swift in Sources */,
 				C28B794C27E3C89A00824C1C /* AuthVC.swift in Sources */,
+				C2D38BBA27E3E99A0020938F /* Assets.swift in Sources */,
 				C28B793627E3C48900824C1C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
