@@ -8,22 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		C28B793627E3C48900824C1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28B793527E3C48900824C1C /* AppDelegate.swift */; };
-		C28B793827E3C48900824C1C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28B793727E3C48900824C1C /* SceneDelegate.swift */; };
-		C28B793A27E3C48900824C1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28B793927E3C48900824C1C /* ViewController.swift */; };
-		C28B793D27E3C48900824C1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C28B793B27E3C48900824C1C /* Main.storyboard */; };
 		C28B793F27E3C48A00824C1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28B793E27E3C48A00824C1C /* Assets.xcassets */; };
 		C28B794227E3C48A00824C1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C28B794027E3C48A00824C1C /* LaunchScreen.storyboard */; };
+		C28B794C27E3C89A00824C1C /* AuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28B794B27E3C89A00824C1C /* AuthVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C28B793227E3C48900824C1C /* MyKindergarten.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyKindergarten.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28B793527E3C48900824C1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C28B793727E3C48900824C1C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C28B793927E3C48900824C1C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C28B793C27E3C48900824C1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C28B793E27E3C48A00824C1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C28B794127E3C48A00824C1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C28B794327E3C48A00824C1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C28B794B27E3C89A00824C1C /* AuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +52,29 @@
 		C28B793427E3C48900824C1C /* MyKindergarten */ = {
 			isa = PBXGroup;
 			children = (
-				C28B793527E3C48900824C1C /* AppDelegate.swift */,
-				C28B793727E3C48900824C1C /* SceneDelegate.swift */,
-				C28B793927E3C48900824C1C /* ViewController.swift */,
-				C28B793B27E3C48900824C1C /* Main.storyboard */,
-				C28B793E27E3C48A00824C1C /* Assets.xcassets */,
-				C28B794027E3C48A00824C1C /* LaunchScreen.storyboard */,
 				C28B794327E3C48A00824C1C /* Info.plist */,
+				C28B794027E3C48A00824C1C /* LaunchScreen.storyboard */,
+				C28B793E27E3C48A00824C1C /* Assets.xcassets */,
+				C28B793527E3C48900824C1C /* AppDelegate.swift */,
+				C28B794927E3C87300824C1C /* Modules */,
 			);
 			path = MyKindergarten;
+			sourceTree = "<group>";
+		};
+		C28B794927E3C87300824C1C /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				C28B794A27E3C88500824C1C /* Auth */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		C28B794A27E3C88500824C1C /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				C28B794B27E3C89A00824C1C /* AuthVC.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +137,6 @@
 			files = (
 				C28B794227E3C48A00824C1C /* LaunchScreen.storyboard in Resources */,
 				C28B793F27E3C48A00824C1C /* Assets.xcassets in Resources */,
-				C28B793D27E3C48900824C1C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +147,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C28B793A27E3C48900824C1C /* ViewController.swift in Sources */,
+				C28B794C27E3C89A00824C1C /* AuthVC.swift in Sources */,
 				C28B793627E3C48900824C1C /* AppDelegate.swift in Sources */,
-				C28B793827E3C48900824C1C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C28B793B27E3C48900824C1C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C28B793C27E3C48900824C1C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C28B794027E3C48A00824C1C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -216,7 +216,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +270,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -292,7 +292,6 @@
 				INFOPLIST_FILE = MyKindergarten/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -321,7 +320,6 @@
 				INFOPLIST_FILE = MyKindergarten/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
