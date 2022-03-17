@@ -52,10 +52,8 @@
 		C28B793427E3C48900824C1C /* MyKindergarten */ = {
 			isa = PBXGroup;
 			children = (
-				C28B794327E3C48A00824C1C /* Info.plist */,
-				C28B794027E3C48A00824C1C /* LaunchScreen.storyboard */,
-				C28B793E27E3C48A00824C1C /* Assets.xcassets */,
-				C28B793527E3C48900824C1C /* AppDelegate.swift */,
+				C2D38BA527E3CC490020938F /* Generated */,
+				C28B794D27E3CA0900824C1C /* Resources */,
 				C28B794927E3C87300824C1C /* Modules */,
 			);
 			path = MyKindergarten;
@@ -75,6 +73,32 @@
 				C28B794B27E3C89A00824C1C /* AuthVC.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		C28B794D27E3CA0900824C1C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C2D38BA627E3CD2E0020938F /* Generated */,
+				C28B793E27E3C48A00824C1C /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C2D38BA527E3CC490020938F /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				C28B794027E3C48A00824C1C /* LaunchScreen.storyboard */,
+				C28B793527E3C48900824C1C /* AppDelegate.swift */,
+				C28B794327E3C48A00824C1C /* Info.plist */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		C2D38BA627E3CD2E0020938F /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Generated;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,7 +313,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GWK7SQ2Y7H;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyKindergarten/Info.plist;
+				INFOPLIST_FILE = MyKindergarten/Generated/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -317,7 +341,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GWK7SQ2Y7H;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyKindergarten/Info.plist;
+				INFOPLIST_FILE = MyKindergarten/Generated/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
