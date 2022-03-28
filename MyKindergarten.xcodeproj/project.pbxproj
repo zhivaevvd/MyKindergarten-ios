@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C249AAD227F2467900298572 /* VCFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C249AAD127F2467900298572 /* VCFactory.swift */; };
+		C249AAD527F24C5B00298572 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C249AAD427F24C5B00298572 /* TabBarController.swift */; };
+		C249AAD827F24CB100298572 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C249AAD727F24CB100298572 /* ProfileVC.swift */; };
+		C249AADA27F24CB900298572 /* ProfileVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C249AAD927F24CB900298572 /* ProfileVM.swift */; };
+		C249AADD27F24D1500298572 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C249AADC27F24D1500298572 /* ChatVC.swift */; };
+		C249AADF27F24D3A00298572 /* ChatVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C249AADE27F24D3A00298572 /* ChatVM.swift */; };
+		C249AAE227F24D7700298572 /* ScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C249AAE127F24D7700298572 /* ScheduleVC.swift */; };
+		C249AAE427F24D9C00298572 /* ScheduleVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C249AAE327F24D9C00298572 /* ScheduleVM.swift */; };
+		C249AAE727F257A500298572 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C249AAE627F257A500298572 /* AppState.swift */; };
 		C28B793627E3C48900824C1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28B793527E3C48900824C1C /* AppDelegate.swift */; };
 		C28B793F27E3C48A00824C1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28B793E27E3C48A00824C1C /* Assets.xcassets */; };
 		C28B794227E3C48A00824C1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C28B794027E3C48A00824C1C /* LaunchScreen.storyboard */; };
@@ -19,6 +28,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C249AAD127F2467900298572 /* VCFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCFactory.swift; sourceTree = "<group>"; };
+		C249AAD427F24C5B00298572 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		C249AAD727F24CB100298572 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		C249AAD927F24CB900298572 /* ProfileVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVM.swift; sourceTree = "<group>"; };
+		C249AADC27F24D1500298572 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
+		C249AADE27F24D3A00298572 /* ChatVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVM.swift; sourceTree = "<group>"; };
+		C249AAE127F24D7700298572 /* ScheduleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleVC.swift; sourceTree = "<group>"; };
+		C249AAE327F24D9C00298572 /* ScheduleVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleVM.swift; sourceTree = "<group>"; };
+		C249AAE627F257A500298572 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		C28B793227E3C48900824C1C /* MyKindergarten.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyKindergarten.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28B793527E3C48900824C1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C28B793E27E3C48A00824C1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -43,6 +61,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C249AACF27F2465400298572 /* Buisness */ = {
+			isa = PBXGroup;
+			children = (
+				C249AAE527F253F600298572 /* Models */,
+				C249AAD027F2466400298572 /* Factories */,
+			);
+			path = Buisness;
+			sourceTree = "<group>";
+		};
+		C249AAD027F2466400298572 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				C249AAD127F2467900298572 /* VCFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		C249AAD327F24C4900298572 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				C249AAD427F24C5B00298572 /* TabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		C249AAD627F24C9900298572 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				C249AAD727F24CB100298572 /* ProfileVC.swift */,
+				C249AAD927F24CB900298572 /* ProfileVM.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		C249AADB27F24D0700298572 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				C249AADC27F24D1500298572 /* ChatVC.swift */,
+				C249AADE27F24D3A00298572 /* ChatVM.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		C249AAE027F24D6500298572 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				C249AAE127F24D7700298572 /* ScheduleVC.swift */,
+				C249AAE327F24D9C00298572 /* ScheduleVM.swift */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
+		C249AAE527F253F600298572 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C249AAE627F257A500298572 /* AppState.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		C28B792927E3C48900824C1C = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +140,7 @@
 		C28B793427E3C48900824C1C /* MyKindergarten */ = {
 			isa = PBXGroup;
 			children = (
+				C249AACF27F2465400298572 /* Buisness */,
 				C2D38BB827E3E87A0020938F /* UI */,
 				C2D38BA527E3CC490020938F /* Generated */,
 				C28B794D27E3CA0900824C1C /* Resources */,
@@ -73,6 +152,10 @@
 		C28B794927E3C87300824C1C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				C249AAE027F24D6500298572 /* Schedule */,
+				C249AADB27F24D0700298572 /* Chat */,
+				C249AAD627F24C9900298572 /* Profile */,
+				C249AAD327F24C4900298572 /* TabBar */,
 				C28B794A27E3C88500824C1C /* Auth */,
 			);
 			path = Modules;
@@ -201,10 +284,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C249AADD27F24D1500298572 /* ChatVC.swift in Sources */,
 				C2D38BB427E3DA2D0020938F /* AuthVM.swift in Sources */,
+				C249AAE227F24D7700298572 /* ScheduleVC.swift in Sources */,
 				C28B794C27E3C89A00824C1C /* AuthVC.swift in Sources */,
+				C249AAD827F24CB100298572 /* ProfileVC.swift in Sources */,
+				C249AADF27F24D3A00298572 /* ChatVM.swift in Sources */,
 				C2D38BBA27E3E99A0020938F /* Assets.swift in Sources */,
+				C249AAE427F24D9C00298572 /* ScheduleVM.swift in Sources */,
+				C249AAD527F24C5B00298572 /* TabBarController.swift in Sources */,
 				C28B793627E3C48900824C1C /* AppDelegate.swift in Sources */,
+				C249AAE727F257A500298572 /* AppState.swift in Sources */,
+				C249AADA27F24CB900298572 /* ProfileVM.swift in Sources */,
+				C249AAD227F2467900298572 /* VCFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,3 +5,10 @@
 
 import Foundation
 
+// MARK: - AuthViewModel
+
+public protocol AuthViewModel: AnyObject {}
+
+// MARK: - AuthVM
+
+public final class AuthVM: AuthViewModel {}
