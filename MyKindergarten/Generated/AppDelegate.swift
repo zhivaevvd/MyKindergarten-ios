@@ -16,4 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         return true
     }
+    
+    private let dataService: DataService = CoreFactory.dataService
 }

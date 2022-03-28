@@ -16,6 +16,9 @@
 		C249AAE227F24D7700298572 /* ScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C249AAE127F24D7700298572 /* ScheduleVC.swift */; };
 		C249AAE427F24D9C00298572 /* ScheduleVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C249AAE327F24D9C00298572 /* ScheduleVM.swift */; };
 		C249AAE727F257A500298572 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C249AAE627F257A500298572 /* AppState.swift */; };
+		C249AAEC27F258D900298572 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C249AAEB27F258D900298572 /* DataService.swift */; };
+		C249AAEF27F2599B00298572 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = C249AAEE27F2599B00298572 /* KeychainAccess */; };
+		C249AAF127F25A6900298572 /* CoreFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C249AAF027F25A6900298572 /* CoreFactory.swift */; };
 		C28B793627E3C48900824C1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28B793527E3C48900824C1C /* AppDelegate.swift */; };
 		C28B793F27E3C48A00824C1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28B793E27E3C48A00824C1C /* Assets.xcassets */; };
 		C28B794227E3C48A00824C1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C28B794027E3C48A00824C1C /* LaunchScreen.storyboard */; };
@@ -37,6 +40,8 @@
 		C249AAE127F24D7700298572 /* ScheduleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleVC.swift; sourceTree = "<group>"; };
 		C249AAE327F24D9C00298572 /* ScheduleVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleVM.swift; sourceTree = "<group>"; };
 		C249AAE627F257A500298572 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		C249AAEB27F258D900298572 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		C249AAF027F25A6900298572 /* CoreFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreFactory.swift; sourceTree = "<group>"; };
 		C28B793227E3C48900824C1C /* MyKindergarten.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyKindergarten.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28B793527E3C48900824C1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C28B793E27E3C48A00824C1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -52,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C249AAEF27F2599B00298572 /* KeychainAccess in Frameworks */,
 				C2D38BAF27E3D9BB0020938F /* AutoLayoutSugar in Frameworks */,
 				C2D38BAC27E3D9A60020938F /* TTGSnackbar in Frameworks */,
 				C2D38BB227E3DA130020938F /* KeyboardManager in Frameworks */,
@@ -64,6 +70,7 @@
 		C249AACF27F2465400298572 /* Buisness */ = {
 			isa = PBXGroup;
 			children = (
+				C249AAEA27F258CD00298572 /* Services */,
 				C249AAE527F253F600298572 /* Models */,
 				C249AAD027F2466400298572 /* Factories */,
 			);
@@ -74,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				C249AAD127F2467900298572 /* VCFactory.swift */,
+				C249AAF027F25A6900298572 /* CoreFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -119,6 +127,14 @@
 				C249AAE627F257A500298572 /* AppState.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		C249AAEA27F258CD00298572 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C249AAEB27F258D900298572 /* DataService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		C28B792927E3C48900824C1C = {
@@ -224,6 +240,7 @@
 				C2D38BAB27E3D9A60020938F /* TTGSnackbar */,
 				C2D38BAE27E3D9BB0020938F /* AutoLayoutSugar */,
 				C2D38BB127E3DA130020938F /* KeyboardManager */,
+				C249AAEE27F2599B00298572 /* KeychainAccess */,
 			);
 			productName = MyKindergarten;
 			productReference = C28B793227E3C48900824C1C /* MyKindergarten.app */;
@@ -257,6 +274,7 @@
 				C2D38BAA27E3D9A60020938F /* XCRemoteSwiftPackageReference "TTGSnackbar" */,
 				C2D38BAD27E3D9BB0020938F /* XCRemoteSwiftPackageReference "auto-layout-sugar-ios" */,
 				C2D38BB027E3DA130020938F /* XCRemoteSwiftPackageReference "KeyboardManager" */,
+				C249AAED27F2599B00298572 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 			);
 			productRefGroup = C28B793327E3C48900824C1C /* Products */;
 			projectDirPath = "";
@@ -285,8 +303,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C249AADD27F24D1500298572 /* ChatVC.swift in Sources */,
+				C249AAEC27F258D900298572 /* DataService.swift in Sources */,
 				C2D38BB427E3DA2D0020938F /* AuthVM.swift in Sources */,
 				C249AAE227F24D7700298572 /* ScheduleVC.swift in Sources */,
+				C249AAF127F25A6900298572 /* CoreFactory.swift in Sources */,
 				C28B794C27E3C89A00824C1C /* AuthVC.swift in Sources */,
 				C249AAD827F24CB100298572 /* ProfileVC.swift in Sources */,
 				C249AADF27F24D3A00298572 /* ChatVM.swift in Sources */,
@@ -508,6 +528,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C249AAED27F2599B00298572 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		C2D38BAA27E3D9A60020938F /* XCRemoteSwiftPackageReference "TTGSnackbar" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/zekunyan/TTGSnackbar.git";
@@ -535,6 +563,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C249AAEE27F2599B00298572 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C249AAED27F2599B00298572 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
 		C2D38BAB27E3D9A60020938F /* TTGSnackbar */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C2D38BAA27E3D9A60020938F /* XCRemoteSwiftPackageReference "TTGSnackbar" */;
