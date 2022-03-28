@@ -9,5 +9,6 @@ public final class ChatVC: UIViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
         title = "Чат"
+        navigationController?.navigationBar.prefersLargeTitles = false
     }
 }

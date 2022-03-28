@@ -6,6 +6,8 @@
 import UIKit
 
 enum VCFactory {
+    static let dataService: DataService = CoreFactory.dataService
+
     static func buildAuthVC() -> UIViewController? {
         let vm = AuthVM()
         let vc = AuthVC(vm: vm)
@@ -19,6 +21,7 @@ enum VCFactory {
 
     static func buildProfileVC() -> UIViewController {
         let vc = ProfileVC()
+        vc.setup(with: dataService)
         return vc
     }
 

@@ -9,5 +9,6 @@ public final class ScheduleVC: UIViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
         title = "Расписание"
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 }

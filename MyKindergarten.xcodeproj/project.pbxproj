@@ -19,6 +19,11 @@
 		C249AAEC27F258D900298572 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C249AAEB27F258D900298572 /* DataService.swift */; };
 		C249AAEF27F2599B00298572 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = C249AAEE27F2599B00298572 /* KeychainAccess */; };
 		C249AAF127F25A6900298572 /* CoreFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C249AAF027F25A6900298572 /* CoreFactory.swift */; };
+		C249AAF427F25C2700298572 /* UIControl+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C249AAF327F25C2700298572 /* UIControl+Utilities.swift */; };
+		C249AAF627F25F7A00298572 /* UIView+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C249AAF527F25F7A00298572 /* UIView+Utilities.swift */; };
+		C249AAF827F25FC500298572 /* Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C249AAF727F25FC500298572 /* Configurator.swift */; };
+		C249AAFA27F2600A00298572 /* UIStackView+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C249AAF927F2600A00298572 /* UIStackView+Utilities.swift */; };
+		C249AAFC27F260C100298572 /* AppDelegate+NavAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = C249AAFB27F260C100298572 /* AppDelegate+NavAppearance.swift */; };
 		C28B793627E3C48900824C1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28B793527E3C48900824C1C /* AppDelegate.swift */; };
 		C28B793F27E3C48A00824C1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28B793E27E3C48A00824C1C /* Assets.xcassets */; };
 		C28B794227E3C48A00824C1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C28B794027E3C48A00824C1C /* LaunchScreen.storyboard */; };
@@ -42,6 +47,11 @@
 		C249AAE627F257A500298572 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		C249AAEB27F258D900298572 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		C249AAF027F25A6900298572 /* CoreFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreFactory.swift; sourceTree = "<group>"; };
+		C249AAF327F25C2700298572 /* UIControl+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+Utilities.swift"; sourceTree = "<group>"; };
+		C249AAF527F25F7A00298572 /* UIView+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utilities.swift"; sourceTree = "<group>"; };
+		C249AAF727F25FC500298572 /* Configurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurator.swift; sourceTree = "<group>"; };
+		C249AAF927F2600A00298572 /* UIStackView+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Utilities.swift"; sourceTree = "<group>"; };
+		C249AAFB27F260C100298572 /* AppDelegate+NavAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+NavAppearance.swift"; sourceTree = "<group>"; };
 		C28B793227E3C48900824C1C /* MyKindergarten.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyKindergarten.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28B793527E3C48900824C1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C28B793E27E3C48A00824C1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -70,6 +80,7 @@
 		C249AACF27F2465400298572 /* Buisness */ = {
 			isa = PBXGroup;
 			children = (
+				C249AAF227F25C1500298572 /* Utilities */,
 				C249AAEA27F258CD00298572 /* Services */,
 				C249AAE527F253F600298572 /* Models */,
 				C249AAD027F2466400298572 /* Factories */,
@@ -137,6 +148,17 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		C249AAF227F25C1500298572 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				C249AAF327F25C2700298572 /* UIControl+Utilities.swift */,
+				C249AAF527F25F7A00298572 /* UIView+Utilities.swift */,
+				C249AAF727F25FC500298572 /* Configurator.swift */,
+				C249AAF927F2600A00298572 /* UIStackView+Utilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		C28B792927E3C48900824C1C = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +223,7 @@
 				C28B794027E3C48A00824C1C /* LaunchScreen.storyboard */,
 				C28B793527E3C48900824C1C /* AppDelegate.swift */,
 				C28B794327E3C48A00824C1C /* Info.plist */,
+				C249AAFB27F260C100298572 /* AppDelegate+NavAppearance.swift */,
 			);
 			path = Generated;
 			sourceTree = "<group>";
@@ -302,16 +325,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C249AAFA27F2600A00298572 /* UIStackView+Utilities.swift in Sources */,
 				C249AADD27F24D1500298572 /* ChatVC.swift in Sources */,
 				C249AAEC27F258D900298572 /* DataService.swift in Sources */,
+				C249AAF627F25F7A00298572 /* UIView+Utilities.swift in Sources */,
 				C2D38BB427E3DA2D0020938F /* AuthVM.swift in Sources */,
 				C249AAE227F24D7700298572 /* ScheduleVC.swift in Sources */,
+				C249AAFC27F260C100298572 /* AppDelegate+NavAppearance.swift in Sources */,
 				C249AAF127F25A6900298572 /* CoreFactory.swift in Sources */,
 				C28B794C27E3C89A00824C1C /* AuthVC.swift in Sources */,
 				C249AAD827F24CB100298572 /* ProfileVC.swift in Sources */,
 				C249AADF27F24D3A00298572 /* ChatVM.swift in Sources */,
 				C2D38BBA27E3E99A0020938F /* Assets.swift in Sources */,
+				C249AAF827F25FC500298572 /* Configurator.swift in Sources */,
 				C249AAE427F24D9C00298572 /* ScheduleVM.swift in Sources */,
+				C249AAF427F25C2700298572 /* UIControl+Utilities.swift in Sources */,
 				C249AAD527F24C5B00298572 /* TabBarController.swift in Sources */,
 				C28B793627E3C48900824C1C /* AppDelegate.swift in Sources */,
 				C249AAE727F257A500298572 /* AppState.swift in Sources */,
