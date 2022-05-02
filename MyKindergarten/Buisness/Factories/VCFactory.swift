@@ -8,13 +8,13 @@ import UIKit
 enum VCFactory {
     static let dataService: DataService = CoreFactory.dataService
 
-    static func buildAuthVC() -> UIViewController? {
+    static func buildAuthVC() -> UIViewController {
         let vm = AuthVM()
         let vc = AuthVC(vm: vm)
         return vc
     }
 
-    static func buildTabBarVC() -> UIViewController? {
+    static func buildTabBarVC() -> UIViewController {
         let vc = TabBarController()
         return vc
     }

@@ -37,7 +37,7 @@ public final class AuthVC: UIViewController {
         let btn = UIButton()
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.setTitleColor(UIColor.black, for: .normal)
-        btn.setTitle("Open", for: .normal)
+        btn.setTitle(L10n.open, for: .normal)
         btn.setAction(for: .touchUpInside) { [weak self] in
             self?.btnTapped()
         }
