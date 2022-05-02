@@ -4,6 +4,8 @@
 //
 
 import AutoLayoutSugar
+import FirebaseFirestore
+import FirebaseFirestoreSwift
 import KeychainAccess
 import UIKit
 
@@ -25,6 +27,14 @@ public final class AuthVC: UIViewController {
         super.viewDidLoad()
         view.addSubview(btn)
         btn.centerX().centerY().height(44)
+        let dataBase = Firestore.firestore()
+        let docRef = dataBase.collection("Users").document("26jsi3K4zrLeoyFXt4Z4")
+        docRef.getDocument { snap, error in
+            guard let user: User = try? snap?.data(as: User.self), error == nil else {
+                return
+            }
+            print(user.name)
+        }
     }
 
     // MARK: Private
@@ -46,6 +56,6 @@ public final class AuthVC: UIViewController {
 
     private func btnTapped() {
         dataService.appState.accessToken = "saawfw"
-        UIApplication.shared.windows.first(where: { $0.isKeyWindow })?.rootViewController = VCFactory.buildTabBarVC()
+        Router.setRoot(VCFactory.buildTabBarVC())
     }
 }

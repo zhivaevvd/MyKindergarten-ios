@@ -1,13 +1,11 @@
 //
-//  AppDelegate+NavAppearance.swift
-//  MyKindergarten
-//
-//  Created by Headdds and hands on 29.03.2022.
+// My Kindergarten
+// Copyright © 2022 Vladislav Zhivaev HxH. All rights reserved.
 //
 
-//import UIKit
+// import UIKit
 //
-//extension AppDelegate {
+// extension AppDelegate {
 //    func configureNavigationBar() {
 //        let appearance = UINavigationBar.appearance()
 //        appearance.tintColor = .black
@@ -25,7 +23,7 @@
 //        appearance.layoutMargins.right = 16
 //        appearance.prefersLargeTitles = false
 //    }
-//}
+// }
 
 import UIKit
 
