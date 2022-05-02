@@ -1,1 +1,6 @@
-"open" = "отккрыть";
+"auth.title" = "Авторизация";
+"auth.phone" = "Номер телефона";
+"auth.password" = "Пароль";
+"auth.logIn" = "Войти";
+"auth.cantLogIn.title" = "Не можете войти?";
+"auth.cantLogIn.description" = "Свяжитесь с администрацией вашего детского сада чтобы восстановить доступ";

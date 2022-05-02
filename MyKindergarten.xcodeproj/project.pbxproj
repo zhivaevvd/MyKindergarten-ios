@@ -33,6 +33,9 @@
 		C246813C28202D37003B7789 /* StyledButton+UILoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C246813B28202D37003B7789 /* StyledButton+UILoadable.swift */; };
 		C246813E28202D67003B7789 /* StyledButtonLoaderStyle+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = C246813D28202D67003B7789 /* StyledButtonLoaderStyle+Default.swift */; };
 		C246814028202DAC003B7789 /* StyledButtonStyle+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = C246813F28202DAC003B7789 /* StyledButtonStyle+Default.swift */; };
+		C2468142282030AB003B7789 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2468141282030AB003B7789 /* AuthView.swift */; };
+		C2468144282036C8003B7789 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2468143282036C8003B7789 /* AuthService.swift */; };
+		C2468146282037D3003B7789 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2468145282037D3003B7789 /* NetworkError.swift */; };
 		C249AAD227F2467900298572 /* VCFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C249AAD127F2467900298572 /* VCFactory.swift */; };
 		C249AAD527F24C5B00298572 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C249AAD427F24C5B00298572 /* TabBarController.swift */; };
 		C249AAD827F24CB100298572 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C249AAD727F24CB100298572 /* ProfileVC.swift */; };
@@ -83,6 +86,9 @@
 		C246813B28202D37003B7789 /* StyledButton+UILoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StyledButton+UILoadable.swift"; sourceTree = "<group>"; };
 		C246813D28202D67003B7789 /* StyledButtonLoaderStyle+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StyledButtonLoaderStyle+Default.swift"; sourceTree = "<group>"; };
 		C246813F28202DAC003B7789 /* StyledButtonStyle+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StyledButtonStyle+Default.swift"; sourceTree = "<group>"; };
+		C2468141282030AB003B7789 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		C2468143282036C8003B7789 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		C2468145282037D3003B7789 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		C249AAD127F2467900298572 /* VCFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCFactory.swift; sourceTree = "<group>"; };
 		C249AAD427F24C5B00298572 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		C249AAD727F24CB100298572 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
@@ -258,6 +264,7 @@
 			children = (
 				C249AAE627F257A500298572 /* AppState.swift */,
 				C2A1607128200A2E0038E9FD /* User.swift */,
+				C2468145282037D3003B7789 /* NetworkError.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -266,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				C249AAEB27F258D900298572 /* DataService.swift */,
+				C2468143282036C8003B7789 /* AuthService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -327,6 +335,7 @@
 			children = (
 				C28B794B27E3C89A00824C1C /* AuthVC.swift */,
 				C2D38BB327E3DA2D0020938F /* AuthVM.swift */,
+				C2468141282030AB003B7789 /* AuthView.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -472,6 +481,7 @@
 				C246813428202CAA003B7789 /* StyledButtonLoaderStyle.swift in Sources */,
 				C246813628202CD1003B7789 /* StyledButtonStateColor.swift in Sources */,
 				C249AAF627F25F7A00298572 /* UIView+Utilities.swift in Sources */,
+				C2468142282030AB003B7789 /* AuthView.swift in Sources */,
 				C24681242820279D003B7789 /* LoaderParameters.swift in Sources */,
 				C2D38BB427E3DA2D0020938F /* AuthVM.swift in Sources */,
 				C24680EC282020CA003B7789 /* Typography.swift in Sources */,
@@ -480,6 +490,7 @@
 				C249AAFC27F260C100298572 /* AppDelegate+NavAppearance.swift in Sources */,
 				C249AAF127F25A6900298572 /* CoreFactory.swift in Sources */,
 				C246812C2820281B003B7789 /* LoaderParameters+Default.swift in Sources */,
+				C2468146282037D3003B7789 /* NetworkError.swift in Sources */,
 				C28B794C27E3C89A00824C1C /* AuthVC.swift in Sources */,
 				C249AAD827F24CB100298572 /* ProfileVC.swift in Sources */,
 				C2A1607228200A2E0038E9FD /* User.swift in Sources */,
@@ -501,6 +512,7 @@
 				C246813A28202D14003B7789 /* UIButton+BackgroundColor.swift in Sources */,
 				C246813228202C8A003B7789 /* StyledButtonLoadable.swift in Sources */,
 				C249AAD527F24C5B00298572 /* TabBarController.swift in Sources */,
+				C2468144282036C8003B7789 /* AuthService.swift in Sources */,
 				C28B793627E3C48900824C1C /* AppDelegate.swift in Sources */,
 				C249AAE727F257A500298572 /* AppState.swift in Sources */,
 				C249AADA27F24CB900298572 /* ProfileVM.swift in Sources */,

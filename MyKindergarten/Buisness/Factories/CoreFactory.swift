@@ -7,4 +7,5 @@ import Foundation
 
 enum CoreFactory {
     static let dataService: DataService = DataServiceImpl()
+    static let authService: AuthService = AuthServiceImpl()
 }

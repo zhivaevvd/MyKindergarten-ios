@@ -8,8 +8,10 @@ import UIKit
 enum VCFactory {
     static let dataService: DataService = CoreFactory.dataService
 
+    static let authService: AuthService = CoreFactory.authService
+
     static func buildAuthVC() -> UIViewController {
-        let vm = AuthVM()
+        let vm = AuthVM(service: authService)
         let vc = AuthVC(vm: vm)
         return vc
     }
