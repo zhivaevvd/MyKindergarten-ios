@@ -23,33 +23,31 @@ internal typealias AssetColorTypeAlias = ColorAsset.Color
 // swiftlint:disable superfluous_disable_command file_length implicit_return
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
-internal enum Asset {
-    internal static let accentColor = ColorAsset(name: "AccentColor")
+public enum Asset {
+    public static let alertsInfo = ColorAsset(name: "alerts.info")
+    public static let accentColor = ColorAsset(name: "AccentColor")
+    public static let borderBlack = ColorAsset(name: "border.black")
+    public static let grayScaleBlack = ColorAsset(name: "grayScale.black")
+    public static let grayScaleBorderGray = ColorAsset(name: "grayScale.borderGray")
+    public static let grayScaleMediumGrey = ColorAsset(name: "grayScale.mediumGrey")
+    public static let grayScaleDarkGray = ColorAsset(name: "grayScale.darkGray")
 }
 
 // MARK: - ColorAsset
 
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 
-internal final class ColorAsset {
+public final class ColorAsset {
     // MARK: Lifecycle
 
     fileprivate init(name: String) {
         self.name = name
     }
 
-    // MARK: Internal
-
-    internal fileprivate(set) var name: String
-
-    #if os(macOS)
-        internal typealias Color = NSColor
-    #elseif os(iOS) || os(tvOS) || os(watchOS)
-        internal typealias Color = UIColor
-    #endif
+    // MARK: Public
 
     @available(iOS 11.0, tvOS 11.0, watchOS 4.0, macOS 10.13, *)
-    internal private(set) lazy var color: Color = {
+    public private(set) lazy var color: Color = {
         guard let color = Color(asset: self) else {
             fatalError("Unable to load color asset named \(name).")
         }
@@ -58,13 +56,23 @@ internal final class ColorAsset {
 
     #if os(iOS) || os(tvOS)
         @available(iOS 11.0, tvOS 11.0, *)
-        internal func color(compatibleWith traitCollection: UITraitCollection) -> Color {
+        public func color(compatibleWith traitCollection: UITraitCollection) -> Color {
             let bundle = BundleToken.bundle
             guard let color = Color(named: name, in: bundle, compatibleWith: traitCollection) else {
                 fatalError("Unable to load color asset named \(name).")
             }
             return color
         }
+    #endif
+
+    // MARK: Internal
+
+    internal fileprivate(set) var name: String
+
+    #if os(macOS)
+        internal typealias Color = NSColor
+    #elseif os(iOS) || os(tvOS) || os(watchOS)
+        public typealias Color = UIColor
     #endif
 }
 
