@@ -35,7 +35,6 @@
 		C246814028202DAC003B7789 /* StyledButtonStyle+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = C246813F28202DAC003B7789 /* StyledButtonStyle+Default.swift */; };
 		C2468142282030AB003B7789 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2468141282030AB003B7789 /* AuthView.swift */; };
 		C2468144282036C8003B7789 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2468143282036C8003B7789 /* AuthService.swift */; };
-		C2468146282037D3003B7789 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2468145282037D3003B7789 /* NetworkError.swift */; };
 		C249AAD227F2467900298572 /* VCFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C249AAD127F2467900298572 /* VCFactory.swift */; };
 		C249AAD527F24C5B00298572 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C249AAD427F24C5B00298572 /* TabBarController.swift */; };
 		C249AAD827F24CB100298572 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C249AAD727F24CB100298572 /* ProfileVC.swift */; };
@@ -53,6 +52,7 @@
 		C249AAF827F25FC500298572 /* Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C249AAF727F25FC500298572 /* Configurator.swift */; };
 		C249AAFA27F2600A00298572 /* UIStackView+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C249AAF927F2600A00298572 /* UIStackView+Utilities.swift */; };
 		C249AAFC27F260C100298572 /* AppDelegate+NavAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = C249AAFB27F260C100298572 /* AppDelegate+NavAppearance.swift */; };
+		C28436FC2821745B0086A308 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28436FB2821745B0086A308 /* Result.swift */; };
 		C28B793627E3C48900824C1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28B793527E3C48900824C1C /* AppDelegate.swift */; };
 		C28B793F27E3C48A00824C1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28B793E27E3C48A00824C1C /* Assets.xcassets */; };
 		C28B794227E3C48A00824C1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C28B794027E3C48A00824C1C /* LaunchScreen.storyboard */; };
@@ -88,7 +88,6 @@
 		C246813F28202DAC003B7789 /* StyledButtonStyle+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StyledButtonStyle+Default.swift"; sourceTree = "<group>"; };
 		C2468141282030AB003B7789 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		C2468143282036C8003B7789 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
-		C2468145282037D3003B7789 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		C249AAD127F2467900298572 /* VCFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCFactory.swift; sourceTree = "<group>"; };
 		C249AAD427F24C5B00298572 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		C249AAD727F24CB100298572 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
@@ -105,6 +104,7 @@
 		C249AAF727F25FC500298572 /* Configurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurator.swift; sourceTree = "<group>"; };
 		C249AAF927F2600A00298572 /* UIStackView+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Utilities.swift"; sourceTree = "<group>"; };
 		C249AAFB27F260C100298572 /* AppDelegate+NavAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+NavAppearance.swift"; sourceTree = "<group>"; };
+		C28436FB2821745B0086A308 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		C28B793227E3C48900824C1C /* MyKindergarten.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyKindergarten.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28B793527E3C48900824C1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C28B793E27E3C48A00824C1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -264,7 +264,7 @@
 			children = (
 				C249AAE627F257A500298572 /* AppState.swift */,
 				C2A1607128200A2E0038E9FD /* User.swift */,
-				C2468145282037D3003B7789 /* NetworkError.swift */,
+				C28436FB2821745B0086A308 /* Result.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -490,10 +490,10 @@
 				C249AAFC27F260C100298572 /* AppDelegate+NavAppearance.swift in Sources */,
 				C249AAF127F25A6900298572 /* CoreFactory.swift in Sources */,
 				C246812C2820281B003B7789 /* LoaderParameters+Default.swift in Sources */,
-				C2468146282037D3003B7789 /* NetworkError.swift in Sources */,
 				C28B794C27E3C89A00824C1C /* AuthVC.swift in Sources */,
 				C249AAD827F24CB100298572 /* ProfileVC.swift in Sources */,
 				C2A1607228200A2E0038E9FD /* User.swift in Sources */,
+				C28436FC2821745B0086A308 /* Result.swift in Sources */,
 				C249AADF27F24D3A00298572 /* ChatVM.swift in Sources */,
 				C2D38BBA27E3E99A0020938F /* Assets.swift in Sources */,
 				C249AAF827F25FC500298572 /* Configurator.swift in Sources */,

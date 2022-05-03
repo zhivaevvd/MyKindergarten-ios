@@ -34,12 +34,13 @@ public final class AuthVM: AuthViewModel {
     public func showNoAccessBottomSheet() {}
 
     public func auth() {
-        PhoneAuthProvider.provider().verifyPhoneNumber("+79979962921", uiDelegate: nil) { _, error in
-            if let error = error {
-                print(error.localizedDescription)
-                return
+        service.auth(with: "test@mm.mm", and: "111111") { [weak self] result in
+            switch result {
+            case let .success(id):
+                print(id)
+            case let .failure(err):
+                print(err.localizedDescription)
             }
-            // print(id)
         }
     }
 
@@ -49,4 +50,13 @@ public final class AuthVM: AuthViewModel {
     private var _isLoading = false
 
     private let service: AuthService
+
+    private var userId: String?
+
+    private var subscriptions = Set<AnyCancellable>()
+
+    private func printError(completion: Subscribers.Completion<Error>) {
+        guard case let .failure(reason) = completion else { return }
+        print(reason.localizedDescription)
+    }
 }
