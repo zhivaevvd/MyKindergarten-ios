@@ -16,7 +16,7 @@
 
 // Deprecated typealiases
 @available(*, deprecated, renamed: "ColorAsset.Color", message: "This typealias will be removed in SwiftGen 7.0")
-internal typealias AssetColorTypeAlias = ColorAsset.Color
+public typealias AssetColorTypeAlias = ColorAsset.Color
 
 // MARK: - Asset
 
@@ -24,13 +24,15 @@ internal typealias AssetColorTypeAlias = ColorAsset.Color
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 public enum Asset {
-    public static let alertsInfo = ColorAsset(name: "alerts.info")
     public static let accentColor = ColorAsset(name: "AccentColor")
+    public static let alertsDanger = ColorAsset(name: "alerts.danger")
+    public static let alertsInfo = ColorAsset(name: "alerts.info")
     public static let borderBlack = ColorAsset(name: "border.black")
     public static let grayScaleBlack = ColorAsset(name: "grayScale.black")
     public static let grayScaleBorderGray = ColorAsset(name: "grayScale.borderGray")
-    public static let grayScaleMediumGrey = ColorAsset(name: "grayScale.mediumGrey")
     public static let grayScaleDarkGray = ColorAsset(name: "grayScale.darkGray")
+    public static let grayScaleLightGray = ColorAsset(name: "grayScale.lightGray")
+    public static let grayScaleMediumGrey = ColorAsset(name: "grayScale.mediumGrey")
 }
 
 // MARK: - ColorAsset
@@ -45,6 +47,14 @@ public final class ColorAsset {
     }
 
     // MARK: Public
+
+    public fileprivate(set) var name: String
+
+    #if os(macOS)
+        public typealias Color = NSColor
+    #elseif os(iOS) || os(tvOS) || os(watchOS)
+        public typealias Color = UIColor
+    #endif
 
     @available(iOS 11.0, tvOS 11.0, watchOS 4.0, macOS 10.13, *)
     public private(set) lazy var color: Color = {
@@ -64,19 +74,9 @@ public final class ColorAsset {
             return color
         }
     #endif
-
-    // MARK: Internal
-
-    internal fileprivate(set) var name: String
-
-    #if os(macOS)
-        internal typealias Color = NSColor
-    #elseif os(iOS) || os(tvOS) || os(watchOS)
-        public typealias Color = UIColor
-    #endif
 }
 
-internal extension ColorAsset.Color {
+public extension ColorAsset.Color {
     @available(iOS 11.0, tvOS 11.0, watchOS 4.0, macOS 10.13, *)
     convenience init?(asset: ColorAsset) {
         let bundle = BundleToken.bundle

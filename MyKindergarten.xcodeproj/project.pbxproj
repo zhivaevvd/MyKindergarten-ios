@@ -53,6 +53,32 @@
 		C249AAFA27F2600A00298572 /* UIStackView+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C249AAF927F2600A00298572 /* UIStackView+Utilities.swift */; };
 		C249AAFC27F260C100298572 /* AppDelegate+NavAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = C249AAFB27F260C100298572 /* AppDelegate+NavAppearance.swift */; };
 		C28436FC2821745B0086A308 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28436FB2821745B0086A308 /* Result.swift */; };
+		C2843721282176110086A308 /* FieldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2843703282176110086A308 /* FieldModel.swift */; };
+		C2843722282176110086A308 /* InputFieldPlaceholderPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2843704282176110086A308 /* InputFieldPlaceholderPosition.swift */; };
+		C2843723282176110086A308 /* InputFieldUIProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2843705282176110086A308 /* InputFieldUIProperties.swift */; };
+		C2843724282176110086A308 /* InputFieldColorStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2843707282176110086A308 /* InputFieldColorStyles.swift */; };
+		C2843725282176110086A308 /* InputField+InputFieldUIConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2843708282176110086A308 /* InputField+InputFieldUIConfigurator.swift */; };
+		C2843726282176110086A308 /* MultilinedInputField+UIConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2843709282176110086A308 /* MultilinedInputField+UIConfigurator.swift */; };
+		C2843727282176110086A308 /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C284370A282176110086A308 /* InputField.swift */; };
+		C2843728282176110086A308 /* Validatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C284370B282176110086A308 /* Validatable.swift */; };
+		C2843729282176110086A308 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C284370C282176110086A308 /* TextField.swift */; };
+		C284372A282176110086A308 /* InputFieldColorStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C284370D282176110086A308 /* InputFieldColorStyle.swift */; };
+		C284372B282176110086A308 /* MultilinedInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C284370E282176110086A308 /* MultilinedInputField.swift */; };
+		C284372C282176110086A308 /* InputFieldState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C284370F282176110086A308 /* InputFieldState.swift */; };
+		C284372D282176110086A308 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2843710282176110086A308 /* TextView.swift */; };
+		C2843730282176110086A308 /* DateValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2843716282176110086A308 /* DateValidator.swift */; };
+		C2843731282176110086A308 /* DateField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2843717282176110086A308 /* DateField.swift */; };
+		C2843732282176110086A308 /* PhoneField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2843719282176110086A308 /* PhoneField.swift */; };
+		C2843733282176110086A308 /* PhoneMaskedDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C284371A282176110086A308 /* PhoneMaskedDelegate.swift */; };
+		C2843734282176110086A308 /* PhoneValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C284371B282176110086A308 /* PhoneValidator.swift */; };
+		C2843735282176110086A308 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C284371D282176110086A308 /* EmailValidator.swift */; };
+		C2843736282176110086A308 /* EmailField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C284371E282176110086A308 /* EmailField.swift */; };
+		C2843737282176110086A308 /* InputFieldUIConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C284371F282176110086A308 /* InputFieldUIConfigurator.swift */; };
+		C284373A282178AB0086A308 /* InputMask in Frameworks */ = {isa = PBXBuildFile; productRef = C2843739282178AB0086A308 /* InputMask */; };
+		C284373F282178F60086A308 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C284373E282178F60086A308 /* PaddingLabel.swift */; };
+		C284374128217B560086A308 /* DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C284374028217B560086A308 /* DateFormatter+Extension.swift */; };
+		C284374328217BBA0086A308 /* String+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C284374228217BBA0086A308 /* String+Utilities.swift */; };
+		C2843745282191270086A308 /* Publisher+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2843744282191270086A308 /* Publisher+Utilities.swift */; };
 		C28B793627E3C48900824C1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28B793527E3C48900824C1C /* AppDelegate.swift */; };
 		C28B793F27E3C48A00824C1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28B793E27E3C48A00824C1C /* Assets.xcassets */; };
 		C28B794227E3C48A00824C1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C28B794027E3C48A00824C1C /* LaunchScreen.storyboard */; };
@@ -105,6 +131,31 @@
 		C249AAF927F2600A00298572 /* UIStackView+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Utilities.swift"; sourceTree = "<group>"; };
 		C249AAFB27F260C100298572 /* AppDelegate+NavAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+NavAppearance.swift"; sourceTree = "<group>"; };
 		C28436FB2821745B0086A308 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		C2843703282176110086A308 /* FieldModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldModel.swift; sourceTree = "<group>"; };
+		C2843704282176110086A308 /* InputFieldPlaceholderPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFieldPlaceholderPosition.swift; sourceTree = "<group>"; };
+		C2843705282176110086A308 /* InputFieldUIProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFieldUIProperties.swift; sourceTree = "<group>"; };
+		C2843707282176110086A308 /* InputFieldColorStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFieldColorStyles.swift; sourceTree = "<group>"; };
+		C2843708282176110086A308 /* InputField+InputFieldUIConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InputField+InputFieldUIConfigurator.swift"; sourceTree = "<group>"; };
+		C2843709282176110086A308 /* MultilinedInputField+UIConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MultilinedInputField+UIConfigurator.swift"; sourceTree = "<group>"; };
+		C284370A282176110086A308 /* InputField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
+		C284370B282176110086A308 /* Validatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validatable.swift; sourceTree = "<group>"; };
+		C284370C282176110086A308 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		C284370D282176110086A308 /* InputFieldColorStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFieldColorStyle.swift; sourceTree = "<group>"; };
+		C284370E282176110086A308 /* MultilinedInputField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultilinedInputField.swift; sourceTree = "<group>"; };
+		C284370F282176110086A308 /* InputFieldState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFieldState.swift; sourceTree = "<group>"; };
+		C2843710282176110086A308 /* TextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		C2843716282176110086A308 /* DateValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateValidator.swift; sourceTree = "<group>"; };
+		C2843717282176110086A308 /* DateField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateField.swift; sourceTree = "<group>"; };
+		C2843719282176110086A308 /* PhoneField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneField.swift; sourceTree = "<group>"; };
+		C284371A282176110086A308 /* PhoneMaskedDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneMaskedDelegate.swift; sourceTree = "<group>"; };
+		C284371B282176110086A308 /* PhoneValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneValidator.swift; sourceTree = "<group>"; };
+		C284371D282176110086A308 /* EmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
+		C284371E282176110086A308 /* EmailField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailField.swift; sourceTree = "<group>"; };
+		C284371F282176110086A308 /* InputFieldUIConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFieldUIConfigurator.swift; sourceTree = "<group>"; };
+		C284373E282178F60086A308 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
+		C284374028217B560086A308 /* DateFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extension.swift"; sourceTree = "<group>"; };
+		C284374228217BBA0086A308 /* String+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utilities.swift"; sourceTree = "<group>"; };
+		C2843744282191270086A308 /* Publisher+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Utilities.swift"; sourceTree = "<group>"; };
 		C28B793227E3C48900824C1C /* MyKindergarten.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyKindergarten.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28B793527E3C48900824C1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C28B793E27E3C48A00824C1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -125,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C249AAEF27F2599B00298572 /* KeychainAccess in Frameworks */,
+				C284373A282178AB0086A308 /* InputMask in Frameworks */,
 				C24680D628200FAE003B7789 /* FirebaseAuth in Frameworks */,
 				C2D38BAF27E3D9BB0020938F /* AutoLayoutSugar in Frameworks */,
 				C24680E428200FAE003B7789 /* FirebaseStorageCombine-Community in Frameworks */,
@@ -286,8 +338,87 @@
 				C249AAF727F25FC500298572 /* Configurator.swift */,
 				C249AAF927F2600A00298572 /* UIStackView+Utilities.swift */,
 				C24680EB282020CA003B7789 /* Typography.swift */,
+				C284374028217B560086A308 /* DateFormatter+Extension.swift */,
+				C284374228217BBA0086A308 /* String+Utilities.swift */,
+				C2843744282191270086A308 /* Publisher+Utilities.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		C2843701282176110086A308 /* InputField */ = {
+			isa = PBXGroup;
+			children = (
+				C2843703282176110086A308 /* FieldModel.swift */,
+				C2843704282176110086A308 /* InputFieldPlaceholderPosition.swift */,
+				C2843705282176110086A308 /* InputFieldUIProperties.swift */,
+				C2843706282176110086A308 /* Configurable */,
+				C284370A282176110086A308 /* InputField.swift */,
+				C284370B282176110086A308 /* Validatable.swift */,
+				C284370C282176110086A308 /* TextField.swift */,
+				C284370D282176110086A308 /* InputFieldColorStyle.swift */,
+				C284370E282176110086A308 /* MultilinedInputField.swift */,
+				C284370F282176110086A308 /* InputFieldState.swift */,
+				C2843710282176110086A308 /* TextView.swift */,
+				C2843711282176110086A308 /* Fields */,
+				C284371F282176110086A308 /* InputFieldUIConfigurator.swift */,
+			);
+			path = InputField;
+			sourceTree = "<group>";
+		};
+		C2843706282176110086A308 /* Configurable */ = {
+			isa = PBXGroup;
+			children = (
+				C2843707282176110086A308 /* InputFieldColorStyles.swift */,
+				C2843708282176110086A308 /* InputField+InputFieldUIConfigurator.swift */,
+				C2843709282176110086A308 /* MultilinedInputField+UIConfigurator.swift */,
+			);
+			path = Configurable;
+			sourceTree = "<group>";
+		};
+		C2843711282176110086A308 /* Fields */ = {
+			isa = PBXGroup;
+			children = (
+				C2843715282176110086A308 /* DateField */,
+				C2843718282176110086A308 /* Phone */,
+				C284371C282176110086A308 /* Email */,
+			);
+			path = Fields;
+			sourceTree = "<group>";
+		};
+		C2843715282176110086A308 /* DateField */ = {
+			isa = PBXGroup;
+			children = (
+				C2843716282176110086A308 /* DateValidator.swift */,
+				C2843717282176110086A308 /* DateField.swift */,
+			);
+			path = DateField;
+			sourceTree = "<group>";
+		};
+		C2843718282176110086A308 /* Phone */ = {
+			isa = PBXGroup;
+			children = (
+				C2843719282176110086A308 /* PhoneField.swift */,
+				C284371A282176110086A308 /* PhoneMaskedDelegate.swift */,
+				C284371B282176110086A308 /* PhoneValidator.swift */,
+			);
+			path = Phone;
+			sourceTree = "<group>";
+		};
+		C284371C282176110086A308 /* Email */ = {
+			isa = PBXGroup;
+			children = (
+				C284371D282176110086A308 /* EmailValidator.swift */,
+				C284371E282176110086A308 /* EmailField.swift */,
+			);
+			path = Email;
+			sourceTree = "<group>";
+		};
+		C284373D282178E80086A308 /* PaddingLabel */ = {
+			isa = PBXGroup;
+			children = (
+				C284373E282178F60086A308 /* PaddingLabel.swift */,
+			);
+			path = PaddingLabel;
 			sourceTree = "<group>";
 		};
 		C28B792927E3C48900824C1C = {
@@ -374,6 +505,8 @@
 		C2D38BB827E3E87A0020938F /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				C284373D282178E80086A308 /* PaddingLabel */,
+				C2843701282176110086A308 /* InputField */,
 				C246812D28202BD2003B7789 /* StyledButton */,
 				C24681212820271B003B7789 /* UILoadable */,
 				C24680E82820203B003B7789 /* Label */,
@@ -411,6 +544,7 @@
 				C24680DF28200FAE003B7789 /* FirebaseFunctions */,
 				C24680E128200FAE003B7789 /* FirebaseStorage */,
 				C24680E328200FAE003B7789 /* FirebaseStorageCombine-Community */,
+				C2843739282178AB0086A308 /* InputMask */,
 			);
 			productName = MyKindergarten;
 			productReference = C28B793227E3C48900824C1C /* MyKindergarten.app */;
@@ -446,6 +580,7 @@
 				C2D38BB027E3DA130020938F /* XCRemoteSwiftPackageReference "KeyboardManager" */,
 				C249AAED27F2599B00298572 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 				C24680D228200FAE003B7789 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				C2843738282178AB0086A308 /* XCRemoteSwiftPackageReference "input-mask-ios" */,
 			);
 			productRefGroup = C28B793327E3C48900824C1C /* Products */;
 			projectDirPath = "";
@@ -475,46 +610,71 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2843737282176110086A308 /* InputFieldUIConfigurator.swift in Sources */,
 				C249AAFA27F2600A00298572 /* UIStackView+Utilities.swift in Sources */,
+				C2843728282176110086A308 /* Validatable.swift in Sources */,
 				C249AADD27F24D1500298572 /* ChatVC.swift in Sources */,
 				C249AAEC27F258D900298572 /* DataService.swift in Sources */,
+				C284372B282176110086A308 /* MultilinedInputField.swift in Sources */,
 				C246813428202CAA003B7789 /* StyledButtonLoaderStyle.swift in Sources */,
 				C246813628202CD1003B7789 /* StyledButtonStateColor.swift in Sources */,
+				C2843724282176110086A308 /* InputFieldColorStyles.swift in Sources */,
+				C2843745282191270086A308 /* Publisher+Utilities.swift in Sources */,
 				C249AAF627F25F7A00298572 /* UIView+Utilities.swift in Sources */,
 				C2468142282030AB003B7789 /* AuthView.swift in Sources */,
+				C2843725282176110086A308 /* InputField+InputFieldUIConfigurator.swift in Sources */,
 				C24681242820279D003B7789 /* LoaderParameters.swift in Sources */,
 				C2D38BB427E3DA2D0020938F /* AuthVM.swift in Sources */,
 				C24680EC282020CA003B7789 /* Typography.swift in Sources */,
 				C249AAE227F24D7700298572 /* ScheduleVC.swift in Sources */,
 				C246813C28202D37003B7789 /* StyledButton+UILoadable.swift in Sources */,
 				C249AAFC27F260C100298572 /* AppDelegate+NavAppearance.swift in Sources */,
+				C284372D282176110086A308 /* TextView.swift in Sources */,
 				C249AAF127F25A6900298572 /* CoreFactory.swift in Sources */,
+				C284374128217B560086A308 /* DateFormatter+Extension.swift in Sources */,
 				C246812C2820281B003B7789 /* LoaderParameters+Default.swift in Sources */,
 				C28B794C27E3C89A00824C1C /* AuthVC.swift in Sources */,
 				C249AAD827F24CB100298572 /* ProfileVC.swift in Sources */,
 				C2A1607228200A2E0038E9FD /* User.swift in Sources */,
 				C28436FC2821745B0086A308 /* Result.swift in Sources */,
 				C249AADF27F24D3A00298572 /* ChatVM.swift in Sources */,
+				C2843727282176110086A308 /* InputField.swift in Sources */,
 				C2D38BBA27E3E99A0020938F /* Assets.swift in Sources */,
 				C249AAF827F25FC500298572 /* Configurator.swift in Sources */,
 				C246813028202C61003B7789 /* StyledButton.swift in Sources */,
 				C24680EA28202046003B7789 /* Label.swift in Sources */,
 				C246814028202DAC003B7789 /* StyledButtonStyle+Default.swift in Sources */,
+				C2843723282176110086A308 /* InputFieldUIProperties.swift in Sources */,
+				C284374328217BBA0086A308 /* String+Utilities.swift in Sources */,
+				C2843729282176110086A308 /* TextField.swift in Sources */,
 				C2468126282027BB003B7789 /* LoaderView.swift in Sources */,
+				C284373F282178F60086A308 /* PaddingLabel.swift in Sources */,
 				C246812A282027F6003B7789 /* UILoadable+UIView.swift in Sources */,
+				C2843721282176110086A308 /* FieldModel.swift in Sources */,
 				C2A16070282009570038E9FD /* Strings.swift in Sources */,
 				C246813E28202D67003B7789 /* StyledButtonLoaderStyle+Default.swift in Sources */,
 				C249AAE427F24D9C00298572 /* ScheduleVM.swift in Sources */,
 				C24680E7282017AC003B7789 /* Router.swift in Sources */,
+				C2843733282176110086A308 /* PhoneMaskedDelegate.swift in Sources */,
+				C2843734282176110086A308 /* PhoneValidator.swift in Sources */,
+				C2843736282176110086A308 /* EmailField.swift in Sources */,
 				C2468128282027DB003B7789 /* UILoadable.swift in Sources */,
+				C284372C282176110086A308 /* InputFieldState.swift in Sources */,
+				C2843732282176110086A308 /* PhoneField.swift in Sources */,
+				C284372A282176110086A308 /* InputFieldColorStyle.swift in Sources */,
 				C249AAF427F25C2700298572 /* UIControl+Utilities.swift in Sources */,
 				C246813828202CF0003B7789 /* StyledButtonStyle.swift in Sources */,
+				C2843731282176110086A308 /* DateField.swift in Sources */,
 				C246813A28202D14003B7789 /* UIButton+BackgroundColor.swift in Sources */,
+				C2843730282176110086A308 /* DateValidator.swift in Sources */,
 				C246813228202C8A003B7789 /* StyledButtonLoadable.swift in Sources */,
 				C249AAD527F24C5B00298572 /* TabBarController.swift in Sources */,
 				C2468144282036C8003B7789 /* AuthService.swift in Sources */,
 				C28B793627E3C48900824C1C /* AppDelegate.swift in Sources */,
 				C249AAE727F257A500298572 /* AppState.swift in Sources */,
+				C2843722282176110086A308 /* InputFieldPlaceholderPosition.swift in Sources */,
+				C2843726282176110086A308 /* MultilinedInputField+UIConfigurator.swift in Sources */,
+				C2843735282176110086A308 /* EmailValidator.swift in Sources */,
 				C249AADA27F24CB900298572 /* ProfileVM.swift in Sources */,
 				C249AAD227F2467900298572 /* VCFactory.swift in Sources */,
 			);
@@ -744,6 +904,14 @@
 				kind = branch;
 			};
 		};
+		C2843738282178AB0086A308 /* XCRemoteSwiftPackageReference "input-mask-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RedMadRobot/input-mask-ios";
+			requirement = {
+				kind = exactVersion;
+				version = 6.0.0;
+			};
+		};
 		C2D38BAA27E3D9A60020938F /* XCRemoteSwiftPackageReference "TTGSnackbar" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/zekunyan/TTGSnackbar.git";
@@ -820,6 +988,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C249AAED27F2599B00298572 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
 			productName = KeychainAccess;
+		};
+		C2843739282178AB0086A308 /* InputMask */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C2843738282178AB0086A308 /* XCRemoteSwiftPackageReference "input-mask-ios" */;
+			productName = InputMask;
 		};
 		C2D38BAB27E3D9A60020938F /* TTGSnackbar */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -30,7 +30,7 @@ public final class AuthServiceImpl: AuthService {
                 completion(.failure(error!))
                 return
             }
-            
+
             completion(.success(result?.user.uid ?? ""))
         }
     }

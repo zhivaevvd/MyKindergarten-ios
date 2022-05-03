@@ -4,3 +4,8 @@
 "auth.logIn" = "Войти";
 "auth.cantLogIn.title" = "Не можете войти?";
 "auth.cantLogIn.description" = "Свяжитесь с администрацией вашего детского сада чтобы восстановить доступ";
+"auth.wrongField" = "Поле заполнено неверно";
+"auth.email" = "E-mail";
+
+"common.bdate" = "Дата рождения";
+"common.invalidDate" = "Неверная дата";

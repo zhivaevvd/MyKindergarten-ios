@@ -11,6 +11,17 @@ public protocol Configurator {}
 
 // MARK: - NSObject + Configurator
 
+public extension Configurator where Self: AnyObject {
+    @discardableResult
+    @inlinable
+    func configure(with configurator: (Self) -> Void) -> Self {
+        configurator(self)
+        return self
+    }
+}
+
+// MARK: - NSObject + Configurator
+
 extension NSObject: Configurator {}
 
 public extension Configurator where Self: UIView {
