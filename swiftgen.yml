@@ -5,8 +5,13 @@ xcassets:
     outputs:
         templateName: swift5
         output: Assets.swift
+        params:
+            publicAccess: true
+
 strings:
     inputs: Localizable.strings
     outputs:
         templateName: structured-swift5
         output: Strings.swift
+        params:
+            publicAccess: true

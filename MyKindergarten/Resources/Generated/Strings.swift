@@ -14,9 +14,35 @@ import Foundation
 
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
-internal enum L10n {
-    /// отккрыть
-    internal static let open = L10n.tr("Localizable", "open")
+public enum L10n {
+    public enum Auth {
+        public enum CantLogIn {
+            /// Свяжитесь с администрацией вашего детского сада чтобы восстановить доступ
+            public static let description = L10n.tr("Localizable", "auth.cantLogIn.description")
+            /// Не можете войти?
+            public static let title = L10n.tr("Localizable", "auth.cantLogIn.title")
+        }
+
+        /// E-mail
+        public static let email = L10n.tr("Localizable", "auth.email")
+        /// Войти
+        public static let logIn = L10n.tr("Localizable", "auth.logIn")
+        /// Пароль
+        public static let password = L10n.tr("Localizable", "auth.password")
+        /// Номер телефона
+        public static let phone = L10n.tr("Localizable", "auth.phone")
+        /// Авторизация
+        public static let title = L10n.tr("Localizable", "auth.title")
+        /// Поле заполнено неверно
+        public static let wrongField = L10n.tr("Localizable", "auth.wrongField")
+    }
+
+    public enum Common {
+        /// Дата рождения
+        public static let bdate = L10n.tr("Localizable", "common.bdate")
+        /// Неверная дата
+        public static let invalidDate = L10n.tr("Localizable", "common.invalidDate")
+    }
 }
 
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length

@@ -7,5 +7,5 @@ import Foundation
 
 public struct User: Decodable {
     public let name: String
-    public let surname: String
+    public let phone: String
 }
