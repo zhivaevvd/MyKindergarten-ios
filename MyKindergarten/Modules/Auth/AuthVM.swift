@@ -3,9 +3,11 @@
 // Copyright © 2022 Vladislav Zhivaev HxH. All rights reserved.
 //
 
+import AutoLayoutSugar
 import Combine
 import FirebaseAuth
 import Foundation
+import UIKit
 
 // MARK: - AuthViewModel
 
@@ -15,7 +17,7 @@ public protocol AuthViewModel: AnyObject {
     var passwordFieldModel: FieldModel { get }
     var isAuthButtonActive: AnyPublisher<Bool, Never> { get }
 
-    func showNoAccessBottomSheet()
+    func showNoAccessBottomSheet(root: UIViewController)
     func auth()
 }
 
@@ -44,8 +46,10 @@ public final class AuthVM: AuthViewModel {
         $_isAuthButtonActive.eraseToAnyPublisher()
     }
 
-    public func showNoAccessBottomSheet() {
-        print("No access")
+    public func showNoAccessBottomSheet(root: UIViewController) {
+        let view = NoAccessBottomSheet().prepareForAutoLayout()
+        let parameters = BottomSheetParameters(contentView: view)
+        Router.present(root: root, vc: VCFactory.buildBottomSheetVC(parameters: parameters))
     }
 
     public func auth() {

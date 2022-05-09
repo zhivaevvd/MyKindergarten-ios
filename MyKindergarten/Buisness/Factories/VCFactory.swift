@@ -36,4 +36,10 @@ enum VCFactory {
         let vc = ScheduleVC()
         return vc
     }
+
+    static func buildBottomSheetVC(parameters: BottomSheetParametersProtocol) -> UIViewController {
+        let vc = BottomSheetController(arguments: parameters)
+        vc.transitioningDelegate = vc
+        return vc
+    }
 }

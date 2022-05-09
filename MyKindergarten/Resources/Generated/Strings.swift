@@ -16,6 +16,13 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 public enum L10n {
     public enum Auth {
+        public enum BottomSheet {
+            /// Для восстановления доступа к аккаунту обратитесь к администрации детского сада
+            public static let message = L10n.tr("Localizable", "auth.bottomSheet.message")
+            /// Не удается войти?
+            public static let title = L10n.tr("Localizable", "auth.bottomSheet.title")
+        }
+
         public enum CantLogIn {
             /// Свяжитесь с администрацией вашего детского сада чтобы восстановить доступ
             public static let description = L10n.tr("Localizable", "auth.cantLogIn.description")

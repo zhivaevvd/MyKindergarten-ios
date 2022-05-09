@@ -73,7 +73,8 @@ public final class AuthVC: UIViewController {
         }
 
         mainView.noAccessButton.setAction(for: .touchUpInside) { [weak self] in
-            self?.vm.showNoAccessBottomSheet()
+            guard let self = self else { return }
+            self.vm.showNoAccessBottomSheet(root: self)
         }
     }
 }
