@@ -87,6 +87,7 @@
 		C2A16070282009570038E9FD /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A1606F282009570038E9FD /* Strings.swift */; };
 		C2A1607228200A2E0038E9FD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A1607128200A2E0038E9FD /* User.swift */; };
 		C2A1607428200CEE0038E9FD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2A1607328200CEE0038E9FD /* GoogleService-Info.plist */; };
+		C2B35E082829980A00BF6AFB /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B35E072829980A00BF6AFB /* PasswordValidator.swift */; };
 		C2D38BAC27E3D9A60020938F /* TTGSnackbar in Frameworks */ = {isa = PBXBuildFile; productRef = C2D38BAB27E3D9A60020938F /* TTGSnackbar */; };
 		C2D38BAF27E3D9BB0020938F /* AutoLayoutSugar in Frameworks */ = {isa = PBXBuildFile; productRef = C2D38BAE27E3D9BB0020938F /* AutoLayoutSugar */; };
 		C2D38BB227E3DA130020938F /* KeyboardManager in Frameworks */ = {isa = PBXBuildFile; productRef = C2D38BB127E3DA130020938F /* KeyboardManager */; };
@@ -166,6 +167,7 @@
 		C2A1606F282009570038E9FD /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		C2A1607128200A2E0038E9FD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C2A1607328200CEE0038E9FD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C2B35E072829980A00BF6AFB /* PasswordValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidator.swift; sourceTree = "<group>"; };
 		C2D38BB327E3DA2D0020938F /* AuthVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVM.swift; sourceTree = "<group>"; };
 		C2D38BB927E3E99A0020938F /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -361,6 +363,7 @@
 				C2843710282176110086A308 /* TextView.swift */,
 				C2843711282176110086A308 /* Fields */,
 				C284371F282176110086A308 /* InputFieldUIConfigurator.swift */,
+				C2B35E072829980A00BF6AFB /* PasswordValidator.swift */,
 			);
 			path = InputField;
 			sourceTree = "<group>";
@@ -613,6 +616,7 @@
 				C2843737282176110086A308 /* InputFieldUIConfigurator.swift in Sources */,
 				C249AAFA27F2600A00298572 /* UIStackView+Utilities.swift in Sources */,
 				C2843728282176110086A308 /* Validatable.swift in Sources */,
+				C2B35E082829980A00BF6AFB /* PasswordValidator.swift in Sources */,
 				C249AADD27F24D1500298572 /* ChatVC.swift in Sources */,
 				C249AAEC27F258D900298572 /* DataService.swift in Sources */,
 				C284372B282176110086A308 /* MultilinedInputField.swift in Sources */,

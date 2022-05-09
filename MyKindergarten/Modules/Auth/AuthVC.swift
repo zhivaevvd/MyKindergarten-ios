@@ -38,17 +38,42 @@ public final class AuthVC: UIViewController {
 
     // MARK: Private
 
+    private var subscriptions = Set<AnyCancellable>()
+
     private let vm: AuthViewModel
 
     private let dataService: DataService = CoreFactory.dataService
 
     private let mainView = AuthView()
 
-    private func configureBindings() {}
+    private func configureBindings() {
+        mainView.emailField.error = vm.emailFieldModel.error
+        mainView.passwordField.error = vm.passwordFieldModel.error
+
+        mainView.emailField.text.sink { [weak self] value in
+            self?.vm.emailFieldModel.setValue(value)
+        }.store(in: &subscriptions)
+
+        mainView.passwordField.text.sink { [weak self] value in
+            self?.vm.passwordFieldModel.setValue(value)
+        }.store(in: &subscriptions)
+
+        vm.isAuthButtonActive.drive { [weak self] isActive in
+            self?.mainView.authButton.isEnabled = isActive
+        }.store(in: &subscriptions)
+
+        vm.isLoading.drive { [weak self] isLoading in
+            self?.mainView.authButton.isLoading = isLoading
+        }.store(in: &subscriptions)
+    }
 
     private func configureActions() {
         mainView.authButton.setAction(for: .touchUpInside) { [weak self] in
             self?.vm.auth()
+        }
+
+        mainView.noAccessButton.setAction(for: .touchUpInside) { [weak self] in
+            self?.vm.showNoAccessBottomSheet()
         }
     }
 }

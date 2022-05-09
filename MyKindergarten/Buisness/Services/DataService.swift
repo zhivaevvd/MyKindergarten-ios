@@ -8,13 +8,13 @@ import KeychainAccess
 
 // MARK: - DataService
 
-protocol DataService: AnyObject {
+public protocol DataService: AnyObject {
     var appState: AppState { get set }
 }
 
 // MARK: - DataServiceImpl
 
-final class DataServiceImpl: DataService {
+public final class DataServiceImpl: DataService {
     // MARK: Lifecycle
 
     init() {
@@ -22,9 +22,9 @@ final class DataServiceImpl: DataService {
         appState = AppState(accessToken: keychain[Keys.accessToken.rawValue])
     }
 
-    // MARK: Internal
+    // MARK: Public
 
-    var appState: AppState {
+    public var appState: AppState {
         didSet {
             keychain[Keys.accessToken.rawValue] = appState.accessToken
         }

@@ -5,7 +5,7 @@
 
 import Foundation
 
-struct AppState {
+public struct AppState {
     var accessToken: String?
 
     var isUserAuthenticated: Bool {
