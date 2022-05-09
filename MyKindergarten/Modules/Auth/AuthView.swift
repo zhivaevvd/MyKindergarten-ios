@@ -52,18 +52,29 @@ final class AuthView: UIView {
     private lazy var titleLabel = Label(.heading1Medium()).configureWithAutoLayout {
         $0.text = L10n.Auth.title
     }
+    
+    private lazy var descriptionLabel = Label(.body1Regular()).configureWithAutoLayout {
+        $0.text = L10n.Auth.description
+        $0.textAlignment = .center
+        $0.numberOfLines = 0
+    }
 
     private func configureSubviews() {
-        addSubviews([titleLabel, emailField, passwordField, noAccessButton, authButton])
+        addSubviews([titleLabel, descriptionLabel, emailField, passwordField, noAccessButton, authButton])
     }
 
     private func makeConstraints() {
         titleLabel
             .safeArea { $0.top(48) }
             .centerX()
-
+        
+        descriptionLabel
+            .top(to: .bottom(24), of: titleLabel)
+            .left(32)
+            .right(32)
+        
         emailField
-            .top(to: .bottom(150), of: titleLabel)
+            .top(to: .bottom(64), of: descriptionLabel)
             .left(32)
             .right(32)
 
