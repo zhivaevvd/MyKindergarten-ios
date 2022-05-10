@@ -102,6 +102,7 @@
 		C2D38BAF27E3D9BB0020938F /* AutoLayoutSugar in Frameworks */ = {isa = PBXBuildFile; productRef = C2D38BAE27E3D9BB0020938F /* AutoLayoutSugar */; };
 		C2D38BB427E3DA2D0020938F /* AuthVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D38BB327E3DA2D0020938F /* AuthVM.swift */; };
 		C2D38BBA27E3E99A0020938F /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D38BB927E3E99A0020938F /* Assets.swift */; };
+		C2E5AFE9282A92B7004AF5EF /* Snack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E5AFE8282A92B7004AF5EF /* Snack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -188,6 +189,7 @@
 		C2B35E202829AF2A00BF6AFB /* NoAccessBottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoAccessBottomSheet.swift; sourceTree = "<group>"; };
 		C2D38BB327E3DA2D0020938F /* AuthVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVM.swift; sourceTree = "<group>"; };
 		C2D38BB927E3E99A0020938F /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		C2E5AFE8282A92B7004AF5EF /* Snack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -565,6 +567,7 @@
 		C2D38BB827E3E87A0020938F /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				C2E5AFE7282A92A7004AF5EF /* Snack */,
 				C2B35E162829AC1A00BF6AFB /* PresentationController */,
 				C2B35E092829AA7E00BF6AFB /* BottomSheet */,
 				C284373D282178E80086A308 /* PaddingLabel */,
@@ -574,6 +577,14 @@
 				C24680E82820203B003B7789 /* Label */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		C2E5AFE7282A92A7004AF5EF /* Snack */ = {
+			isa = PBXGroup;
+			children = (
+				C2E5AFE8282A92B7004AF5EF /* Snack.swift */,
+			);
+			path = Snack;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -714,6 +725,7 @@
 				C2843723282176110086A308 /* InputFieldUIProperties.swift in Sources */,
 				C284374328217BBA0086A308 /* String+Utilities.swift in Sources */,
 				C2B35E212829AF2A00BF6AFB /* NoAccessBottomSheet.swift in Sources */,
+				C2E5AFE9282A92B7004AF5EF /* Snack.swift in Sources */,
 				C2843729282176110086A308 /* TextField.swift in Sources */,
 				C2468126282027BB003B7789 /* LoaderView.swift in Sources */,
 				C284373F282178F60086A308 /* PaddingLabel.swift in Sources */,

@@ -77,13 +77,16 @@ public final class AuthVM: AuthViewModel {
             guard let self = self else { return }
             switch result {
             case let .success(accessToken):
-                self._isLoading = false
                 self.appState.accessToken = accessToken
                 Router.setRoot(VCFactory.buildTabBarVC())
-            case let .failure(err):
-                // TODO: Add snack
-                print(err.localizedDescription)
+            case let .failure(error):
+                if error.localizedDescription == L10n.Auth.noUserError {
+                    Snack.noUserError()
+                } else {
+                    Snack.authError(error.localizedDescription == L10n.Auth.noInternetError)
+                }
             }
+            self._isLoading = false
         }
     }
 

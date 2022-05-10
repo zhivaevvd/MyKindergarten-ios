@@ -36,12 +36,22 @@ public enum L10n {
         public static let email = L10n.tr("Localizable", "auth.email")
         /// Войти
         public static let logIn = L10n.tr("Localizable", "auth.logIn")
+        /// Нет соединения
+        public static let noInterner = L10n.tr("Localizable", "auth.noInterner")
+        /// Network error (such as timeout, interrupted connection or unreachable host) has occurred.
+        public static let noInternetError = L10n.tr("Localizable", "auth.noInternetError")
+        /// Такого пользователя не существует
+        public static let noUser = L10n.tr("Localizable", "auth.noUser")
+        /// There is no user record corresponding to this identifier. The user may have been deleted.
+        public static let noUserError = L10n.tr("Localizable", "auth.noUserError")
         /// Пароль
         public static let password = L10n.tr("Localizable", "auth.password")
         /// Номер телефона
         public static let phone = L10n.tr("Localizable", "auth.phone")
         /// Авторизация
         public static let title = L10n.tr("Localizable", "auth.title")
+        /// Неизвестная ошибка
+        public static let unknownError = L10n.tr("Localizable", "auth.unknownError")
         /// Поле заполнено неверно
         public static let wrongField = L10n.tr("Localizable", "auth.wrongField")
     }

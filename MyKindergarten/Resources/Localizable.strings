@@ -9,6 +9,11 @@
 "auth.email" = "E-mail";
 "auth.bottomSheet.title" = "Не удается войти?";
 "auth.bottomSheet.message" = "Для восстановления доступа к аккаунту обратитесь к администрации детского сада";
+"auth.noUserError" = "There is no user record corresponding to this identifier. The user may have been deleted.";
+"auth.noUser" = "Такого пользователя не существует";
+"auth.unknownError" = "Неизвестная ошибка";
+"auth.noInternetError" = "Network error (such as timeout, interrupted connection or unreachable host) has occurred.";
+"auth.noInterner" = "Нет соединения";
 
 "common.bdate" = "Дата рождения";
 "common.invalidDate" = "Неверная дата";
