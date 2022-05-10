@@ -11,7 +11,7 @@ enum VCFactory {
     static let authService: AuthService = CoreFactory.authService
 
     static func buildAuthVC() -> UIViewController {
-        let vm = AuthVM(service: authService, appState: dataService.appState)
+        let vm = AuthVM(service: authService, dataService: dataService)
         let vc = AuthVC(vm: vm)
         return vc
     }

@@ -26,9 +26,9 @@ public protocol AuthViewModel: AnyObject {
 public final class AuthVM: AuthViewModel {
     // MARK: Lifecycle
 
-    public init(service: AuthService, appState: AppState) {
+    public init(service: AuthService, dataService: DataService) {
         self.service = service
-        self.appState = appState
+        self.dataService = dataService
         listenEmailField()
     }
 
@@ -67,7 +67,7 @@ public final class AuthVM: AuthViewModel {
 
     private let service: AuthService
 
-    private var appState: AppState
+    private let dataService: DataService
 
     private var subscriptions = Set<AnyCancellable>()
 
@@ -77,7 +77,7 @@ public final class AuthVM: AuthViewModel {
             guard let self = self else { return }
             switch result {
             case let .success(accessToken):
-                self.appState.accessToken = accessToken
+                self.dataService.appState.accessToken = accessToken
                 Router.setRoot(VCFactory.buildTabBarVC())
             case let .failure(error):
                 if error.localizedDescription == L10n.Auth.noUserError {
