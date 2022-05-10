@@ -3,16 +3,21 @@
 // Copyright © 2022 Vladislav Zhivaev HxH. All rights reserved.
 //
 
+import AutoLayoutSugar
 import Combine
 import FirebaseAuth
 import Foundation
+import UIKit
 
 // MARK: - AuthViewModel
 
 public protocol AuthViewModel: AnyObject {
     var isLoading: AnyPublisher<Bool, Never> { get }
+    var emailFieldModel: FieldModel { get }
+    var passwordFieldModel: FieldModel { get }
+    var isAuthButtonActive: AnyPublisher<Bool, Never> { get }
 
-    func showNoAccessBottomSheet()
+    func showNoAccessBottomSheet(root: UIViewController)
     func auth()
 }
 
@@ -21,27 +26,35 @@ public protocol AuthViewModel: AnyObject {
 public final class AuthVM: AuthViewModel {
     // MARK: Lifecycle
 
-    public init(service: AuthService) {
+    public init(service: AuthService, appState: AppState) {
         self.service = service
+        self.appState = appState
+        listenEmailField()
     }
 
     // MARK: Public
+
+    public private(set) var emailFieldModel: FieldModel = .init(validator: EmailValidator.common)
+
+    public private(set) var passwordFieldModel: FieldModel = .init(validator: PasswordValidator.common)
 
     public var isLoading: AnyPublisher<Bool, Never> {
         $_isLoading.eraseToAnyPublisher()
     }
 
-    public func showNoAccessBottomSheet() {}
+    public var isAuthButtonActive: AnyPublisher<Bool, Never> {
+        $_isAuthButtonActive.eraseToAnyPublisher()
+    }
+
+    public func showNoAccessBottomSheet(root: UIViewController) {
+        let view = NoAccessBottomSheet().prepareForAutoLayout()
+        let parameters = BottomSheetParameters(contentView: view)
+        Router.present(root: root, vc: VCFactory.buildBottomSheetVC(parameters: parameters))
+    }
 
     public func auth() {
-        service.auth(with: "test@mm.mm", and: "111111") { [weak self] result in
-            switch result {
-            case let .success(id):
-                print(id)
-            case let .failure(err):
-                print(err.localizedDescription)
-            }
-        }
+        guard passwordFieldModel.validate() else { return }
+        makeAuth()
     }
 
     // MARK: Private
@@ -49,14 +62,43 @@ public final class AuthVM: AuthViewModel {
     @Published
     private var _isLoading = false
 
+    @Published
+    private var _isAuthButtonActive = false
+
     private let service: AuthService
 
-    private var userId: String?
+    private var appState: AppState
 
     private var subscriptions = Set<AnyCancellable>()
 
-    private func printError(completion: Subscribers.Completion<Error>) {
-        guard case let .failure(reason) = completion else { return }
-        print(reason.localizedDescription)
+    private func makeAuth() {
+        _isLoading = true
+        service.auth(with: emailFieldModel.uFieldValue, and: passwordFieldModel.uFieldValue) { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case let .success(accessToken):
+                self.appState.accessToken = accessToken
+                Router.setRoot(VCFactory.buildTabBarVC())
+            case let .failure(error):
+                if error.localizedDescription == L10n.Auth.noUserError {
+                    Snack.noUserError()
+                } else {
+                    Snack.authError(error.localizedDescription == L10n.Auth.noInternetError)
+                }
+            }
+            self._isLoading = false
+        }
+    }
+
+    private func listenEmailField() {
+        emailFieldModel.value.sink { [weak self] _ in
+            guard let self = self else { return }
+            guard self.emailFieldModel.validate(emptyCheck: true, notifyError: false) else {
+                self._isAuthButtonActive = false
+                return
+            }
+
+            self._isAuthButtonActive = true
+        }.store(in: &subscriptions)
     }
 }

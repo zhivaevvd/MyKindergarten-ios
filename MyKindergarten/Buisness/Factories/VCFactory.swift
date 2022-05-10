@@ -11,7 +11,7 @@ enum VCFactory {
     static let authService: AuthService = CoreFactory.authService
 
     static func buildAuthVC() -> UIViewController {
-        let vm = AuthVM(service: authService)
+        let vm = AuthVM(service: authService, appState: dataService.appState)
         let vc = AuthVC(vm: vm)
         return vc
     }
@@ -34,6 +34,12 @@ enum VCFactory {
 
     static func buildScheduleVC() -> UIViewController {
         let vc = ScheduleVC()
+        return vc
+    }
+
+    static func buildBottomSheetVC(parameters: BottomSheetParametersProtocol) -> UIViewController {
+        let vc = BottomSheetController(arguments: parameters)
+        vc.transitioningDelegate = vc
         return vc
     }
 }
