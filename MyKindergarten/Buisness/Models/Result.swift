@@ -6,6 +6,6 @@
 import Foundation
 
 public enum Result {
-    case success(String)
+    case success(Any)
     case failure(Error)
 }

@@ -65,18 +65,6 @@ public extension DateFormatter {
         return df.string(from: date)
     }
 
-    /// Дата в формате сегодня 16:30 /  вчера 11:00 / полная дата
-    /// - parameter separator: разделитель
-//    static func readableDateWithTime(from _date: Date, separator: String = ", ", locale _: Locale = ruLocale) -> String {
-//        if Calendar.current.isDateInToday(_date) {
-//            return "\(CommonStrings.today)\(separator)\(time(from: _date))"
-//        } else if Calendar.current.isDateInYesterday(_date) {
-//            return "\(CommonStrings.yestarday)\(separator)\(time(from: _date))"
-//        } else {
-//            return date(from: _date)
-//        }
-//    }
-
     /// Дата в формате 02.08.2022
     /// - parameter separator: разделитель
     static func date(from date: Date, separator: String = ".", locale: Locale = ruLocale) -> String {

@@ -8,10 +8,10 @@ import UIKit
 enum VCFactory {
     static let dataService: DataService = CoreFactory.dataService
 
-    static let authService: AuthService = CoreFactory.authService
+    static let profileService: ProfileService = CoreFactory.authService
 
     static func buildAuthVC() -> UIViewController {
-        let vm = AuthVM(service: authService, dataService: dataService)
+        let vm = AuthVM(service: profileService, dataService: dataService)
         let vc = AuthVC(vm: vm)
         return vc
     }
@@ -22,8 +22,8 @@ enum VCFactory {
     }
 
     static func buildProfileVC() -> UIViewController {
-        let vc = ProfileVC()
-        vc.setup(with: dataService)
+        let vm = ProfileVM(service: profileService, dataService: dataService)
+        let vc = ProfileVC(vm: vm)
         return vc
     }
 

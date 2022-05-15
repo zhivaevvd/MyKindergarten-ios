@@ -19,12 +19,17 @@ public enum Snack {
         showSnack(snack)
     }
 
+    public static func commonError() {
+        let snack = TTGSnackbar(message: "Произошла ошибка", duration: .middle)
+        showSnack(snack)
+    }
+
     // MARK: Private
 
     private static func showSnack(
         _ snack: TTGSnackbar,
         animationType: TTGSnackbarAnimationType = .slideFromLeftToRight,
-        backgroundColor: UIColor = .systemRed,
+        backgroundColor: UIColor = Asset.alertsDanger.color,
         textAlign: NSTextAlignment = .center
     ) {
         snack.animationType = animationType
