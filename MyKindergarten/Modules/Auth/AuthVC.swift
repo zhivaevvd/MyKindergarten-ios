@@ -42,8 +42,6 @@ public final class AuthVC: UIViewController {
 
     private let vm: AuthViewModel
 
-    private let dataService: DataService = CoreFactory.dataService
-
     private let mainView = AuthView()
 
     private func configureBindings() {

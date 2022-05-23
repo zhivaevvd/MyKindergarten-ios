@@ -18,4 +18,8 @@ public enum Router {
         guard let navContr = navContr else { return }
         navContr.pushViewController(vc, animated: true)
     }
+
+    static func dismissFrontmost(root: UIViewController, _ completion: (() -> Void)? = nil) {
+        root.dismiss(animated: true, completion: completion)
+    }
 }

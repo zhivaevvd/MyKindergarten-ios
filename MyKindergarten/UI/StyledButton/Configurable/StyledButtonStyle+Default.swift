@@ -38,6 +38,22 @@ public extension StyledButtonStyle {
         loaderStyle: .gray
     )
 
+    static let red44 = StyledButtonStyle(
+        font: .systemFont(ofSize: 14, weight: .medium),
+        disabledFont: .systemFont(ofSize: 14, weight: .medium),
+        background: StyledButtonStateColor(
+            enabledColor: Asset.alertsDanger.color,
+            disabledColor: Asset.alertsDanger.color,
+            pressedColor: Asset.alertsDanger.color.withAlphaComponent(0.9)
+        ),
+        text: .difficult(.white, Asset.grayScaleMediumGrey.color),
+        border: .plain(.clear),
+        borderWidth: 0,
+        cornerRadius: 9,
+        buttonHeight: 44,
+        loaderStyle: .gray
+    )
+
     static let plainGrayText = StyledButtonStyle(
         font: .systemFont(ofSize: 14),
         disabledFont: .systemFont(ofSize: 14),

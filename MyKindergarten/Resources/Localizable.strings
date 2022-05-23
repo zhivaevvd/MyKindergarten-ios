@@ -15,5 +15,26 @@
 "auth.noInternetError" = "Network error (such as timeout, interrupted connection or unreachable host) has occurred.";
 "auth.noInterner" = "Нет соединения";
 
+"profile.address" = "Адрес дошкольного учреждения";
+"profile.group" = "Группа";
+"profile.logout" = "Выйти";
+"profile.login" = "Логин для входа";
+"profile.password" = "Пароль для входа";
+"profile.information" = "Информация";
+"profile.warning" = "Вы действительно хотите выйти?";
+"profile.confirmLogout" = "Да, выйти";
+"profile.infoTitle" = "Хотите изменить данные?";
+"profile.infoDescription" = "Для изменения личных данных обратитесь в администрацию дошкольного учреждения";
+
 "common.bdate" = "Дата рождения";
 "common.invalidDate" = "Неверная дата";
+"common.close" = "Закрыть";
+
+"tabbar.schedule" = "Расписание";
+"tabbar.profile" = "Профиль";
+
+"groups.firstJun" = "Первая младшая";
+"groups.secondJun" = "Вторая младшая";
+"groups.middle" = "Средняя";
+"groups.senior" = "Старшая";
+"groups.preparatory" = "Подготовительная";
