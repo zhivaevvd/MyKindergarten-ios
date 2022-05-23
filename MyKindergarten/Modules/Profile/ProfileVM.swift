@@ -11,6 +11,7 @@ import UIKit
 // MARK: - ProfileViewModel
 
 public protocol ProfileViewModel: AnyObject {
+    var isLoading: AnyPublisher<Bool, Never> { get }
     var user: AnyPublisher<User?, Never> { get }
 
     func showLogoutSheet(root: UIViewController)
@@ -32,6 +33,10 @@ public final class ProfileVM: ProfileViewModel {
 
     public var user: AnyPublisher<User?, Never> {
         $_user.eraseToAnyPublisher()
+    }
+
+    public var isLoading: AnyPublisher<Bool, Never> {
+        $_isLoading.eraseToAnyPublisher()
     }
 
     public func showLogoutSheet(root: UIViewController) {
@@ -61,6 +66,9 @@ public final class ProfileVM: ProfileViewModel {
     @Published
     private var _user: User?
 
+    @Published
+    private var _isLoading = false
+
     private func logout() {
         service.logout()
         dataService.appState.accessToken = nil
@@ -68,13 +76,19 @@ public final class ProfileVM: ProfileViewModel {
     }
 
     private func getUser(id: String) {
+        _isLoading = true
         service.getUser(uid: id) { [weak self] result in
             switch result {
             case let .success(user):
                 self?._user = user as? User
             case let .failure(error):
-                print(error.localizedDescription)
+                if error.localizedDescription == L10n.Auth.noInternetError {
+                    Snack.noInternet()
+                } else {
+                    Snack.commonError()
+                }
             }
+            self?._isLoading = false
         }
     }
 }

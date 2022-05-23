@@ -7,6 +7,7 @@ import Foundation
 
 public struct AppState {
     var accessToken: String?
+    var user: User?
 
     var isUserAuthenticated: Bool {
         !(accessToken ?? "").isEmpty

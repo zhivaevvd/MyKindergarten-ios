@@ -10,6 +10,8 @@ enum VCFactory {
 
     static let profileService: ProfileService = CoreFactory.authService
 
+    static let scheduleService: ScheduleService = CoreFactory.scheduleService
+
     static func buildAuthVC() -> UIViewController {
         let vm = AuthVM(service: profileService, dataService: dataService)
         let vc = AuthVC(vm: vm)
@@ -33,8 +35,14 @@ enum VCFactory {
     }
 
     static func buildScheduleVC() -> UIViewController {
-        let vc = ScheduleVC()
+        let vm = ScheduleVM(service: scheduleService, dataService: dataService)
+        let vc = ScheduleVC(vm: vm)
         return vc
+    }
+
+    static func buildScheduleItemVC() -> UIViewController {
+        let vm = ScheduleItemVM(service: scheduleService)
+        return ScheduleItemVC(vm: vm)
     }
 
     static func buildBottomSheetVC(parameters: BottomSheetParametersProtocol) -> UIViewController {

@@ -33,6 +33,8 @@
 "tabbar.schedule" = "Расписание";
 "tabbar.profile" = "Профиль";
 
+"schedule.teacher" = "Воспитатель: %@";
+
 "groups.firstJun" = "Первая младшая";
 "groups.secondJun" = "Вторая младшая";
 "groups.middle" = "Средняя";

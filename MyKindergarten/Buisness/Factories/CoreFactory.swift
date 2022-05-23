@@ -8,4 +8,5 @@ import Foundation
 enum CoreFactory {
     static let dataService: DataService = DataServiceImpl()
     static let authService: ProfileService = ProfileServiceImpl()
+    static let scheduleService: ScheduleService = SheduleServiceImpl()
 }
