@@ -30,6 +30,9 @@
 "common.invalidDate" = "Неверная дата";
 "common.close" = "Закрыть";
 
+"tabbar.schedule" = "Расписание";
+"tabbar.profile" = "Профиль";
+
 "groups.firstJun" = "Первая младшая";
 "groups.secondJun" = "Вторая младшая";
 "groups.middle" = "Средняя";

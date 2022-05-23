@@ -25,10 +25,10 @@ public class TabBarController: UITabBarController {
     private func setupTabBar() {
         modalPresentationStyle = .fullScreen
         setViewControllers([scheduleVC, profileVC, chatVC], animated: false)
-        scheduleVC.title = "Расписание"
+        scheduleVC.title = L10n.Tabbar.schedule
         scheduleVC.tabBarItem.image = UIImage(systemName: "calendar")
 
-        profileVC.title = "Профиль"
+        profileVC.title = L10n.Tabbar.profile
         profileVC.tabBarItem.image = UIImage(systemName: "person.fill")
 
         chatVC.title = "Чат"

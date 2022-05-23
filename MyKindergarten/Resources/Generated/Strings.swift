@@ -94,6 +94,13 @@ public enum L10n {
     /// Вы действительно хотите выйти?
     public static let warning = L10n.tr("Localizable", "profile.warning")
   }
+
+  public enum Tabbar {
+    /// Профиль
+    public static let profile = L10n.tr("Localizable", "tabbar.profile")
+    /// Расписание
+    public static let schedule = L10n.tr("Localizable", "tabbar.schedule")
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces
