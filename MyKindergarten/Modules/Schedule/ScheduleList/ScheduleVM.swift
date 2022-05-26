@@ -40,11 +40,18 @@ public final class ScheduleVM: ScheduleViewModel {
     }
 
     public func scheduleItemDidTap(at indexPath: IndexPath, navContr: UINavigationController) {
+        guard selectedDate != "" else {
+            Snack.weekNotChoosen()
+            return
+        }
+        
+        _isLoading = true
+        
         service.getScheduleItem(
             group: (dataService.appState.user?.groups.first)!,
             week: selectedDate,
             id: _scheduleDataSource[indexPath.row].id,
-            completion: { result in
+            completion: { [weak self] result in
                 switch result {
                 case let .success(item):
                     guard let item = item as? ScheduleItem else { return }
@@ -56,6 +63,8 @@ public final class ScheduleVM: ScheduleViewModel {
                         Snack.commonError()
                     }
                 }
+                
+                self?._isLoading = false
             }
         )
     }

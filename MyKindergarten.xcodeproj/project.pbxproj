@@ -95,6 +95,7 @@
 		C2A16070282009570038E9FD /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A1606F282009570038E9FD /* Strings.swift */; };
 		C2A1607228200A2E0038E9FD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A1607128200A2E0038E9FD /* User.swift */; };
 		C2AA160F2840276D003AEF40 /* ScheduleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AA160E2840276D003AEF40 /* ScheduleItem.swift */; };
+		C2AA1611284036B9003AEF40 /* ScheduleItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AA1610284036B9003AEF40 /* ScheduleItemView.swift */; };
 		C2ADC5B9283EB0F400A644D6 /* ChooseWeekSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ADC5B8283EB0F400A644D6 /* ChooseWeekSheet.swift */; };
 		C2B35E082829980A00BF6AFB /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B35E072829980A00BF6AFB /* PasswordValidator.swift */; };
 		C2B35E0B2829AAAA00BF6AFB /* ScrollableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B35E0A2829AAAA00BF6AFB /* ScrollableView.swift */; };
@@ -203,6 +204,7 @@
 		C2A1606F282009570038E9FD /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		C2A1607128200A2E0038E9FD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C2AA160E2840276D003AEF40 /* ScheduleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleItem.swift; sourceTree = "<group>"; };
+		C2AA1610284036B9003AEF40 /* ScheduleItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleItemView.swift; sourceTree = "<group>"; };
 		C2ADC5B8283EB0F400A644D6 /* ChooseWeekSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseWeekSheet.swift; sourceTree = "<group>"; };
 		C2B35E072829980A00BF6AFB /* PasswordValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidator.swift; sourceTree = "<group>"; };
 		C2B35E0A2829AAAA00BF6AFB /* ScrollableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableView.swift; sourceTree = "<group>"; };
@@ -586,6 +588,7 @@
 		C2908F1E283BC950004D86C6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C2AA1610284036B9003AEF40 /* ScheduleItemView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -882,6 +885,7 @@
 				C246813828202CF0003B7789 /* StyledButtonStyle.swift in Sources */,
 				C2DB8F4528317EBC00071F1A /* InfoSheet.swift in Sources */,
 				C2843731282176110086A308 /* DateField.swift in Sources */,
+				C2AA1611284036B9003AEF40 /* ScheduleItemView.swift in Sources */,
 				C246813A28202D14003B7789 /* UIButton+BackgroundColor.swift in Sources */,
 				C2843730282176110086A308 /* DateValidator.swift in Sources */,
 				C246813228202C8A003B7789 /* StyledButtonLoadable.swift in Sources */,

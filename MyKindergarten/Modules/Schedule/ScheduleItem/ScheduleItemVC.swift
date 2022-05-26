@@ -23,8 +23,14 @@ public final class ScheduleItemVC: UIViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    public override func loadView() {
+        view = mainView
+    }
 
     // MARK: Private
+    
+    private let mainView = ScheduleItemView()
 
     private let vm: ScheduleItemViewModel
 

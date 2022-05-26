@@ -6,5 +6,8 @@
 import Foundation
 
 public struct ScheduleItem: Decodable {
+    public let title: String
     public let description: String
+    public let group: String
+    public let week: String
 }

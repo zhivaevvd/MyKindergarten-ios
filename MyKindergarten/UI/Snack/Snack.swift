@@ -28,6 +28,11 @@ public enum Snack {
         let snack = TTGSnackbar(message: "Произошла ошибка", duration: .middle)
         showSnack(snack)
     }
+    
+    public static func weekNotChoosen() {
+        let snack = TTGSnackbar(message: "Неделя не выбрана", duration: .short)
+        showSnack(snack)
+    }
 
     // MARK: Private
 
