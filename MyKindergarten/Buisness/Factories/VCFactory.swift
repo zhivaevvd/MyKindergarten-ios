@@ -40,8 +40,8 @@ enum VCFactory {
         return vc
     }
 
-    static func buildScheduleItemVC() -> UIViewController {
-        let vm = ScheduleItemVM(service: scheduleService)
+    static func buildScheduleItemVC(item: ScheduleItem) -> UIViewController {
+        let vm = ScheduleItemVM(service: scheduleService, item: item)
         return ScheduleItemVC(vm: vm)
     }
 

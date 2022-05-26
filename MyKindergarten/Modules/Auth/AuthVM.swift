@@ -78,15 +78,28 @@ public final class AuthVM: AuthViewModel {
             switch result {
             case let .success(accessToken):
                 self.dataService.appState.accessToken = accessToken as? String
+                self.service.getUser(uid: accessToken as! String) { [weak self] result in
+                    guard let self = self else { return }
+                    switch result {
+                    case let .success(user):
+                        self.dataService.appState.user = user as? User
+                    case let .failure(error):
+                        self.handleError(error: error)
+                    }
+                }
                 Router.setRoot(VCFactory.buildTabBarVC())
             case let .failure(error):
-                if error.localizedDescription == L10n.Auth.noUserError {
-                    Snack.noUserError()
-                } else {
-                    Snack.authError(error.localizedDescription == L10n.Auth.noInternetError)
-                }
+                self.handleError(error: error)
             }
             self._isLoading = false
+        }
+    }
+
+    private func handleError(error: Error) {
+        if error.localizedDescription == L10n.Auth.noUserError {
+            Snack.noUserError()
+        } else {
+            Snack.authError(error.localizedDescription == L10n.Auth.noInternetError)
         }
     }
 

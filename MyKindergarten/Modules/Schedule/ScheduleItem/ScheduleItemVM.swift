@@ -15,13 +15,16 @@ public protocol ScheduleItemViewModel: AnyObject {}
 public final class ScheduleItemVM: ScheduleItemViewModel {
     // MARK: Lifecycle
 
-    public init(service: ScheduleService) {
+    public init(service: ScheduleService, item: ScheduleItem) {
         self.service = service
+        scheduleItem = item
     }
 
     // MARK: Private
 
     private let service: ScheduleService
+
+    private let scheduleItem: ScheduleItem
 
     private var subscriptions = Set<AnyCancellable>()
 }

@@ -3,6 +3,7 @@
 // Copyright © 2022 Vladislav Zhivaev HxH. All rights reserved.
 //
 
+import AutoLayoutSugar
 import Combine
 import UIKit
 
@@ -15,6 +16,7 @@ public final class ScheduleVC: UIViewController {
         self.vm = vm
         super.init(nibName: nil, bundle: nil)
         view.backgroundColor = .white
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Неделя", style: .plain, target: self, action: #selector(weekTap))
         configureBindings()
     }
 
@@ -50,6 +52,11 @@ public final class ScheduleVC: UIViewController {
 
     private var scheduleDataSource: UITableViewDiffableDataSource<SimpleDiffableSection, Schedule>?
 
+    @objc
+    private func weekTap() {
+        vm.selectDate(root: self)
+    }
+
     private func configureBindings() {
         vm.scheduleDataSource.drive { [weak self] dataSource in
             self?.applyScheduleSnapshot(with: dataSource)
@@ -81,6 +88,7 @@ extension ScheduleVC {
 
 extension ScheduleVC: UITableViewDelegate {
     public func tableView(_: UITableView, didSelectRowAt indexPath: IndexPath) {
-        vm.scheduleItemDidTap(at: indexPath)
+        guard let navContr = navigationController else { return }
+        vm.scheduleItemDidTap(at: indexPath, navContr: navContr)
     }
 }

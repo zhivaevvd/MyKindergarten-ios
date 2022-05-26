@@ -94,6 +94,8 @@
 		C2A1606E282008570038E9FD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C2A1606D282008570038E9FD /* Localizable.strings */; };
 		C2A16070282009570038E9FD /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A1606F282009570038E9FD /* Strings.swift */; };
 		C2A1607228200A2E0038E9FD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A1607128200A2E0038E9FD /* User.swift */; };
+		C2AA160F2840276D003AEF40 /* ScheduleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AA160E2840276D003AEF40 /* ScheduleItem.swift */; };
+		C2ADC5B9283EB0F400A644D6 /* ChooseWeekSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ADC5B8283EB0F400A644D6 /* ChooseWeekSheet.swift */; };
 		C2B35E082829980A00BF6AFB /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B35E072829980A00BF6AFB /* PasswordValidator.swift */; };
 		C2B35E0B2829AAAA00BF6AFB /* ScrollableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B35E0A2829AAAA00BF6AFB /* ScrollableView.swift */; };
 		C2B35E0D2829AB4800BF6AFB /* UIPanGestureRecognizer+Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B35E0C2829AB4800BF6AFB /* UIPanGestureRecognizer+Direction.swift */; };
@@ -200,6 +202,8 @@
 		C2A1606D282008570038E9FD /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		C2A1606F282009570038E9FD /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		C2A1607128200A2E0038E9FD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C2AA160E2840276D003AEF40 /* ScheduleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleItem.swift; sourceTree = "<group>"; };
+		C2ADC5B8283EB0F400A644D6 /* ChooseWeekSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseWeekSheet.swift; sourceTree = "<group>"; };
 		C2B35E072829980A00BF6AFB /* PasswordValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidator.swift; sourceTree = "<group>"; };
 		C2B35E0A2829AAAA00BF6AFB /* ScrollableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableView.swift; sourceTree = "<group>"; };
 		C2B35E0C2829AB4800BF6AFB /* UIPanGestureRecognizer+Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIPanGestureRecognizer+Direction.swift"; sourceTree = "<group>"; };
@@ -369,11 +373,11 @@
 		C249AAE527F253F600298572 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C2AA160D28402756003AEF40 /* Schedule */,
 				C2E5AFED282AA37A004AF5EF /* Profile */,
 				C249AAE627F257A500298572 /* AppState.swift */,
 				C28436FB2821745B0086A308 /* Result.swift */,
 				C2B35E0E2829AB8800BF6AFB /* BottomSheetStyleProtocol.swift */,
-				C2908F16283BA224004D86C6 /* Shcedule.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -546,6 +550,7 @@
 			children = (
 				C2908F0D283B9A36004D86C6 /* ScheduleView.swift */,
 				C2908F11283B9FF5004D86C6 /* SceduleCell.swift */,
+				C2ADC5B8283EB0F400A644D6 /* ChooseWeekSheet.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -583,6 +588,15 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C2AA160D28402756003AEF40 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				C2908F16283BA224004D86C6 /* Shcedule.swift */,
+				C2AA160E2840276D003AEF40 /* ScheduleItem.swift */,
+			);
+			path = Schedule;
 			sourceTree = "<group>";
 		};
 		C2B35E092829AA7E00BF6AFB /* BottomSheet */ = {
@@ -856,12 +870,14 @@
 				C2843736282176110086A308 /* EmailField.swift in Sources */,
 				C2468128282027DB003B7789 /* UILoadable.swift in Sources */,
 				C2B35E0F2829AB8800BF6AFB /* BottomSheetStyleProtocol.swift in Sources */,
+				C2AA160F2840276D003AEF40 /* ScheduleItem.swift in Sources */,
 				C284372C282176110086A308 /* InputFieldState.swift in Sources */,
 				C2843732282176110086A308 /* PhoneField.swift in Sources */,
 				C284372A282176110086A308 /* InputFieldColorStyle.swift in Sources */,
 				C2E5AFF5282AAA6C004AF5EF /* GroupView.swift in Sources */,
 				C2B35E182829AC2E00BF6AFB /* PresentationController.swift in Sources */,
 				C249AAF427F25C2700298572 /* UIControl+Utilities.swift in Sources */,
+				C2ADC5B9283EB0F400A644D6 /* ChooseWeekSheet.swift in Sources */,
 				C2908F20283BC95D004D86C6 /* ScheduleItemVC.swift in Sources */,
 				C246813828202CF0003B7789 /* StyledButtonStyle.swift in Sources */,
 				C2DB8F4528317EBC00071F1A /* InfoSheet.swift in Sources */,

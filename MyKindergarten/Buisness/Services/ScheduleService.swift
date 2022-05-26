@@ -9,6 +9,7 @@ import Firebase
 
 public protocol ScheduleService: AnyObject {
     func getSchedule(completion: @escaping ((Result) -> Void))
+    func getScheduleItem(group: String, week: String, id: String, completion: @escaping ((Result) -> Void))
 }
 
 // MARK: - SheduleServiceImpl
@@ -33,6 +34,20 @@ public final class SheduleServiceImpl: ScheduleService {
 
             let list = try? result?.data(as: ListResponse<Schedule>.self)
             completion(.success(list?.list ?? []))
+        }
+    }
+
+    public func getScheduleItem(group: String, week: String, id: String, completion: @escaping ((Result) -> Void)) {
+        let docRef = database.collection(group).document(week).collection(id).document("item")
+
+        docRef.getDocument { snap, error in
+            guard error == nil else {
+                completion(.failure(error!))
+                return
+            }
+
+            guard let item = try? snap?.data(as: ScheduleItem.self) else { return }
+            completion(.success(item))
         }
     }
 
