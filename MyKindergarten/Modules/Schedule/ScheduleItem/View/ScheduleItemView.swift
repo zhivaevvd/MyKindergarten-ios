@@ -31,15 +31,18 @@ final class ScheduleItemView: UIView {
             aboutDescriptionLabel.text = model.description
             groupLabel.text = L10n.Schedule.group(model.group)
             weekLabel.text = L10n.Schedule.week(model.week)
+            weekTheme.text = L10n.Schedule.weekTheme(model.weekTheme)
             teacherView.person = model.teacher
             teacherView.tapAction = { [weak self] person in
                 self?.teacherDidTap?(person)
             }
 
             tasksStackView.removeAllArrangedSubviews()
-//            for task in model.tasks {
-//                //
-//            }
+            for task in model.tasks {
+                let view = TaskItemView()
+                view.task = task
+                tasksStackView.addArrangedSubview(view)
+            }
         }
     }
 
@@ -52,6 +55,8 @@ final class ScheduleItemView: UIView {
     private lazy var groupLabel = Label(.heading3Medium()).prepareForAutoLayout()
 
     private lazy var weekLabel = Label(.heading3Medium()).prepareForAutoLayout()
+
+    private lazy var weekTheme = Label(.heading3Medium()).prepareForAutoLayout()
 
     private lazy var aboutTitleLabel = Label(.heading1Medium()).configureWithAutoLayout {
         $0.text = L10n.Schedule.about
@@ -88,6 +93,7 @@ final class ScheduleItemView: UIView {
                 aboutDescriptionLabel,
                 groupLabel,
                 weekLabel,
+                weekTheme,
                 teacherLabel,
                 teacherView,
                 tasksLabel,
@@ -106,7 +112,8 @@ final class ScheduleItemView: UIView {
         aboutDescriptionLabel.left(16).right(16).top(to: .bottom(12), of: aboutTitleLabel)
         groupLabel.left(16).right(16).top(to: .bottom(24), of: aboutDescriptionLabel)
         weekLabel.left(16).right(16).top(to: .bottom(12), of: groupLabel)
-        teacherLabel.top(to: .bottom(24), of: weekLabel).left(16).right(16)
+        weekTheme.left(16).right(16).top(to: .bottom(12), of: weekLabel)
+        teacherLabel.top(to: .bottom(24), of: weekTheme).left(16).right(16)
         teacherView.top(to: .bottom(12), of: teacherLabel).left(16).right(16)
         tasksLabel.top(to: .bottom(24), of: teacherView).left(16).right(16)
         tasksStackView.top(to: .bottom(12), of: tasksLabel).left(16).right(16).bottom(20)

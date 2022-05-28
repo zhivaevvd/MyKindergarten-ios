@@ -45,6 +45,8 @@
 "schedule.experience" = "Опыт: %@ лет";
 "schedule.attestation" = "Аттестация: %@";
 "schedule.teacherTitle" = "Педагог";
+"schedule.showRecomendations" = "Посмотреть";
+"schedule.weekTheme" = "Тематика недели: %@";
 
 "groups.firstJun" = "Первая младшая";
 "groups.secondJun" = "Вторая младшая";

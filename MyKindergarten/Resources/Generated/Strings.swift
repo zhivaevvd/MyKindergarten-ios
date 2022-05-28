@@ -110,6 +110,8 @@ public enum L10n {
         public static let advancedTraining = L10n.tr("Localizable", "schedule.advancedTraining")
         /// Образование
         public static let education = L10n.tr("Localizable", "schedule.education")
+        /// Посмотреть руководство
+        public static let showRecomendations = L10n.tr("Localizable", "schedule.showRecomendations")
         /// Задания
         public static let tasks = L10n.tr("Localizable", "schedule.tasks")
         /// Педагог
@@ -143,6 +145,11 @@ public enum L10n {
         /// Неделя: %@
         public static func week(_ p1: Any) -> String {
             L10n.tr("Localizable", "schedule.week", String(describing: p1))
+        }
+
+        /// Тематика недели: %@
+        public static func weekTheme(_ p1: Any) -> String {
+            L10n.tr("Localizable", "schedule.weekTheme", String(describing: p1))
         }
     }
 
