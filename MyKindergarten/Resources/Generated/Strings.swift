@@ -63,6 +63,11 @@ public enum L10n {
         public static let close = L10n.tr("Localizable", "common.close")
         /// Неверная дата
         public static let invalidDate = L10n.tr("Localizable", "common.invalidDate")
+
+        /// %@ год
+        public static func year(_ p1: Any) -> String {
+            L10n.tr("Localizable", "common.year", String(describing: p1))
+        }
     }
 
     public enum Groups {
@@ -110,7 +115,7 @@ public enum L10n {
         public static let advancedTraining = L10n.tr("Localizable", "schedule.advancedTraining")
         /// Образование
         public static let education = L10n.tr("Localizable", "schedule.education")
-        /// Посмотреть руководство
+        /// Посмотреть
         public static let showRecomendations = L10n.tr("Localizable", "schedule.showRecomendations")
         /// Задания
         public static let tasks = L10n.tr("Localizable", "schedule.tasks")

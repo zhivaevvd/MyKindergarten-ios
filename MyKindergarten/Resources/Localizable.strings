@@ -29,6 +29,7 @@
 "common.bdate" = "Дата рождения";
 "common.invalidDate" = "Неверная дата";
 "common.close" = "Закрыть";
+"common.year" = "%@ год";
 
 "tabbar.schedule" = "Расписание";
 "tabbar.profile" = "Профиль";

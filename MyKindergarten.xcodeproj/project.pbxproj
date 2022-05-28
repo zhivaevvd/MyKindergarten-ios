@@ -127,6 +127,7 @@
 		C2DC14532842AE47000D0555 /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DC14522842AE47000D0555 /* PageControl.swift */; };
 		C2DC14552842AEE9000D0555 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DC14542842AEE9000D0555 /* Photo.swift */; };
 		C2DC14572842B363000D0555 /* TaskItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DC14562842B363000D0555 /* TaskItemView.swift */; };
+		C2DC145A2842C0A7000D0555 /* AchievementsItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DC14592842C0A7000D0555 /* AchievementsItemView.swift */; };
 		C2E5AFE9282A92B7004AF5EF /* Snack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E5AFE8282A92B7004AF5EF /* Snack.swift */; };
 		C2E5AFEC282A9FE2004AF5EF /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E5AFEB282A9FE2004AF5EF /* ProfileView.swift */; };
 		C2E5AFEF282AA3F6004AF5EF /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E5AFEE282AA3F6004AF5EF /* Group.swift */; };
@@ -244,6 +245,7 @@
 		C2DC14522842AE47000D0555 /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
 		C2DC14542842AEE9000D0555 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		C2DC14562842B363000D0555 /* TaskItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItemView.swift; sourceTree = "<group>"; };
+		C2DC14592842C0A7000D0555 /* AchievementsItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsItemView.swift; sourceTree = "<group>"; };
 		C2E5AFE8282A92B7004AF5EF /* Snack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snack.swift; sourceTree = "<group>"; };
 		C2E5AFEB282A9FE2004AF5EF /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		C2E5AFEE282AA3F6004AF5EF /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
@@ -675,8 +677,8 @@
 		C2CD2A8A28427AFB00CADB9A /* TeacherCard */ = {
 			isa = PBXGroup;
 			children = (
+				C2DC14582842C07D000D0555 /* View */,
 				C2CD2A8B28427B1500CADB9A /* TeacherCardVC.swift */,
-				C2CD2A8D28427B7C00CADB9A /* TeacherCardView.swift */,
 			);
 			path = TeacherCard;
 			sourceTree = "<group>";
@@ -734,6 +736,15 @@
 				C2DC14522842AE47000D0555 /* PageControl.swift */,
 			);
 			path = PageControl;
+			sourceTree = "<group>";
+		};
+		C2DC14582842C07D000D0555 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C2CD2A8D28427B7C00CADB9A /* TeacherCardView.swift */,
+				C2DC14592842C0A7000D0555 /* AchievementsItemView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		C2E5AFE7282A92A7004AF5EF /* Snack */ = {
@@ -955,6 +966,7 @@
 				C246813828202CF0003B7789 /* StyledButtonStyle.swift in Sources */,
 				C2DB8F4528317EBC00071F1A /* InfoSheet.swift in Sources */,
 				C2843731282176110086A308 /* DateField.swift in Sources */,
+				C2DC145A2842C0A7000D0555 /* AchievementsItemView.swift in Sources */,
 				C2DC14572842B363000D0555 /* TaskItemView.swift in Sources */,
 				C2AA1611284036B9003AEF40 /* ScheduleItemView.swift in Sources */,
 				C246813A28202D14003B7789 /* UIButton+BackgroundColor.swift in Sources */,

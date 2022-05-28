@@ -38,6 +38,14 @@ final class TeacherCardView: UIView {
 
             educationDescriptionLabel.text = model.education
             advancedTrainingDescriptionLabel.text = model.advancedTraining
+
+            guard let achievements = model.achievments else { return }
+            achievementsStackView.removeAllArrangedSubviews()
+            for achievement in achievements {
+                let view = AchievementsItemView()
+                view.achievement = achievement
+                achievementsStackView.addArrangedSubview(view)
+            }
         }
     }
 
@@ -91,13 +99,14 @@ final class TeacherCardView: UIView {
         $0.text = L10n.Schedule.achievments
     }
 
-    private lazy var achievmentsStackView = UIStackView().configureWithAutoLayout {
-        $0.axis = .vertical
-    }
-
     private lazy var contentStackView = UIStackView().configureWithAutoLayout {
         $0.axis = .vertical
         $0.spacing = 24
+    }
+
+    private lazy var achievementsStackView = UIStackView().configureWithAutoLayout {
+        $0.axis = .vertical
+        $0.spacing = 12
     }
 
     private lazy var containerView = UIView().prepareForAutoLayout()
@@ -116,6 +125,7 @@ final class TeacherCardView: UIView {
             advancedTrainingTitleLabel,
             advancedTrainingDescriptionLabel,
             achievmentsLabel,
+            achievementsStackView,
         ])
     }
 

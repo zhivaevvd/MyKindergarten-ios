@@ -13,6 +13,6 @@ public struct Teacher: Decodable {
     public let attestation: String
     public let education: String
     public let advancedTraining: String
-    public let achievments: [Achievments]?
-    public let profRetraining: [Achievments]?
+    public let achievments: [Achievment]?
+    public let profRetraining: [Achievment]?
 }

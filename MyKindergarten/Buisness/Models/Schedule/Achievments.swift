@@ -5,7 +5,7 @@
 
 import Foundation
 
-public struct Achievments: Decodable {
+public struct Achievment: Decodable {
     public let year: Int
     public let description: String
 }
