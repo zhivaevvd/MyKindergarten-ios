@@ -707,6 +707,7 @@
 		C2D38BB827E3E87A0020938F /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				C2DC145B2842C744000D0555 /* New Group */,
 				C2DC14512842AE3B000D0555 /* PageControl */,
 				C2DC144E2842ABCE000D0555 /* ProfileAvatarView */,
 				C2908F13283BA048004D86C6 /* Reusable */,
@@ -745,6 +746,13 @@
 				C2DC14592842C0A7000D0555 /* AchievementsItemView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C2DC145B2842C744000D0555 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		C2E5AFE7282A92A7004AF5EF /* Snack */ = {

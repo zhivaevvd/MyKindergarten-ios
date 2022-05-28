@@ -77,18 +77,33 @@ public final class ProfileVM: ProfileViewModel {
 
     private func getUser(id: String) {
         _isLoading = true
-        service.getUser(uid: id) { [weak self] result in
-            switch result {
-            case let .success(user):
-                self?._user = user as? User
-            case let .failure(error):
-                if error.localizedDescription == L10n.Auth.noInternetError {
-                    Snack.noInternet()
-                } else {
-                    Snack.commonError()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            self.service.getUser(uid: id) { [weak self] result in
+                switch result {
+                case let .success(user):
+                    self?._user = user as? User
+                case let .failure(error):
+                    if error.localizedDescription == L10n.Auth.noInternetError {
+                        Snack.noInternet()
+                    } else {
+                        Snack.commonError()
+                    }
                 }
+                self?._isLoading = false
             }
-            self?._isLoading = false
         }
+//        service.getUser(uid: id) { [weak self] result in
+//            switch result {
+//            case let .success(user):
+//                self?._user = user as? User
+//            case let .failure(error):
+//                if error.localizedDescription == L10n.Auth.noInternetError {
+//                    Snack.noInternet()
+//                } else {
+//                    Snack.commonError()
+//                }
+//            }
+//            self?._isLoading = false
+//        }
     }
 }

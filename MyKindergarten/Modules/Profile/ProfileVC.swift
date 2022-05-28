@@ -3,6 +3,7 @@
 // Copyright © 2022 Vladislav Zhivaev HxH. All rights reserved.
 //
 
+import AutoLayoutSugar
 import Combine
 import UIKit
 
@@ -71,6 +72,12 @@ public final class ProfileVC: UIViewController {
         vm.user.drive { [weak self] user in
             self?.mainView.user = user
             self?.titleLabel.text = user?.name
+        }.store(in: &subscriptions)
+
+        vm.isLoading.drive { [weak self] isLoading in
+            self?.mainView.scrollView.isHidden = isLoading
+            isLoading ? (self?.mainView.loaderView.alpha = 1) : (self?.mainView.loaderView.alpha = 0)
+            isLoading ? self?.mainView.loaderView.startLoading(with: .dark) : self?.mainView.loaderView.stopLoadingProgress()
         }.store(in: &subscriptions)
     }
 

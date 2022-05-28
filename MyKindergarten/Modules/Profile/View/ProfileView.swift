@@ -31,6 +31,10 @@ final class ProfileView: UIView {
 
     private(set) lazy var logoutButton = StyledButton(style: .red44, title: L10n.Profile.logout).prepareForAutoLayout()
 
+    private(set) lazy var loaderView = UIView().configureWithAutoLayout {
+        $0.alpha = 0
+    }
+
     var user: User? {
         didSet {
             guard let user = user else { return }
@@ -71,7 +75,7 @@ final class ProfileView: UIView {
     private lazy var loginDetailsView = LoginDetailsView().prepareForAutoLayout()
 
     private func configureSubviews() {
-        addSubview(scrollView)
+        addSubviews([scrollView, loaderView])
         scrollView.addSubview(containerView)
         containerView.addSubviews([avatarView, nameView, addressView, informationLabel, groupView, loginDetailsView, logoutButton])
     }
@@ -79,6 +83,7 @@ final class ProfileView: UIView {
     private func makeConstraints() {
         scrollView.pin(excluding: .bottom)
         scrollView.safeArea { $0.bottom(0) }
+        loaderView.pinToSuperview()
         containerView
             .top()
             .left()

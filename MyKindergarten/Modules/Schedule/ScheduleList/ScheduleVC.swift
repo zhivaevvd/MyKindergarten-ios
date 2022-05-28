@@ -61,6 +61,10 @@ public final class ScheduleVC: UIViewController {
         vm.scheduleDataSource.drive { [weak self] dataSource in
             self?.applyScheduleSnapshot(with: dataSource)
         }.store(in: &subscriptions)
+
+        vm.isLoading.drive { [weak self] isLoading in
+            isLoading ? self?.mainView.startLoading(with: .dark) : self?.mainView.stopLoadingProgress()
+        }.store(in: &subscriptions)
     }
 }
 
