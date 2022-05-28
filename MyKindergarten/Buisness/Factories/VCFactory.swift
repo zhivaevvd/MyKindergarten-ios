@@ -50,4 +50,8 @@ enum VCFactory {
         vc.transitioningDelegate = vc
         return vc
     }
+
+    static func buildTeacherCardVC(teacher: Teacher) -> UIViewController {
+        TeacherCardVC(teacher: teacher)
+    }
 }

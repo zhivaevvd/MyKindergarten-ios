@@ -34,6 +34,17 @@
 "tabbar.profile" = "Профиль";
 
 "schedule.teacher" = "Воспитатель: %@";
+"schedule.group" = "Группа: %@";
+"schedule.week" = "Неделя: %@";
+"schedule.about" = "О направлении";
+"schedule.tasks" = "Задания";
+"schedule.education" = "Образование";
+"schedule.advancedTraining" = "Повышение квалификации";
+"schedule.achievments" = "Достижения";
+"schedule.position" = "Должность: %@";
+"schedule.experience" = "Опыт: %@ лет";
+"schedule.attestation" = "Аттестация: %@";
+"schedule.teacherTitle" = "Педагог";
 
 "groups.firstJun" = "Первая младшая";
 "groups.secondJun" = "Вторая младшая";

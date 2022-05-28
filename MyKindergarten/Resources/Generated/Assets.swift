@@ -36,6 +36,7 @@ public enum Asset {
     public static let grayScaleLightGray = ColorAsset(name: "grayScale.lightGray")
     public static let grayScaleMediumGrey = ColorAsset(name: "grayScale.mediumGrey")
     public static let iconInfo = ImageAsset(name: "icon.info")
+    public static let iconNavBack = ImageAsset(name: "icon.navBack")
     public static let profilePlaceholder = ImageAsset(name: "profilePlaceholder")
 }
 

@@ -44,11 +44,17 @@ public final class ScheduleVM: ScheduleViewModel {
             Snack.weekNotChoosen()
             return
         }
-        
+
         _isLoading = true
-        
+
+        var group = dataService.group!
+
+        if group == "Старшая" {
+            group = "senior"
+        }
+
         service.getScheduleItem(
-            group: (dataService.appState.user?.groups.first)!,
+            group: group,
             week: selectedDate,
             id: _scheduleDataSource[indexPath.row].id,
             completion: { [weak self] result in
@@ -63,7 +69,7 @@ public final class ScheduleVM: ScheduleViewModel {
                         Snack.commonError()
                     }
                 }
-                
+
                 self?._isLoading = false
             }
         )

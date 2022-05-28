@@ -82,12 +82,13 @@ public final class AuthVM: AuthViewModel {
                     guard let self = self else { return }
                     switch result {
                     case let .success(user):
-                        self.dataService.appState.user = user as? User
+                        let user = user as? User
+                        self.dataService.group = user?.groups.first
+                        Router.setRoot(VCFactory.buildTabBarVC())
                     case let .failure(error):
                         self.handleError(error: error)
                     }
                 }
-                Router.setRoot(VCFactory.buildTabBarVC())
             case let .failure(error):
                 self.handleError(error: error)
             }

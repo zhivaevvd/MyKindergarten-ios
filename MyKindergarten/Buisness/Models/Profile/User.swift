@@ -7,6 +7,7 @@ import Foundation
 
 public struct User: Decodable {
     public let name: String
+    public let photos: [Photo]
     public let phone: String
     public let kindergartenAddress: String
     public let groups: [String]

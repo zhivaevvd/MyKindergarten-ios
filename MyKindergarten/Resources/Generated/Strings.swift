@@ -102,9 +102,47 @@ public enum L10n {
     }
 
     public enum Schedule {
+        /// О направлении
+        public static let about = L10n.tr("Localizable", "schedule.about")
+        /// Достижения
+        public static let achievments = L10n.tr("Localizable", "schedule.achievments")
+        /// Повышение квалификации
+        public static let advancedTraining = L10n.tr("Localizable", "schedule.advancedTraining")
+        /// Образование
+        public static let education = L10n.tr("Localizable", "schedule.education")
+        /// Задания
+        public static let tasks = L10n.tr("Localizable", "schedule.tasks")
+        /// Педагог
+        public static let teacherTitle = L10n.tr("Localizable", "schedule.teacherTitle")
+
+        /// Аттестация: %@
+        public static func attestation(_ p1: Any) -> String {
+            L10n.tr("Localizable", "schedule.attestation", String(describing: p1))
+        }
+
+        /// Опыт: %@ лет
+        public static func experience(_ p1: Any) -> String {
+            L10n.tr("Localizable", "schedule.experience", String(describing: p1))
+        }
+
+        /// Группа: %@
+        public static func group(_ p1: Any) -> String {
+            L10n.tr("Localizable", "schedule.group", String(describing: p1))
+        }
+
+        /// Должность: %@
+        public static func position(_ p1: Any) -> String {
+            L10n.tr("Localizable", "schedule.position", String(describing: p1))
+        }
+
         /// Воспитатель: %@
         public static func teacher(_ p1: Any) -> String {
             L10n.tr("Localizable", "schedule.teacher", String(describing: p1))
+        }
+
+        /// Неделя: %@
+        public static func week(_ p1: Any) -> String {
+            L10n.tr("Localizable", "schedule.week", String(describing: p1))
         }
     }
 

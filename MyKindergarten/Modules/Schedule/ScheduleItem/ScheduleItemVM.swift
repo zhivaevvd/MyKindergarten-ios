@@ -5,10 +5,15 @@
 
 import Combine
 import Foundation
+import UIKit
 
 // MARK: - ScheduleItemViewModel
 
-public protocol ScheduleItemViewModel: AnyObject {}
+public protocol ScheduleItemViewModel: AnyObject {
+    var scheduleItem: ScheduleItem { get }
+
+    func showTeacherCard(_ teacher: Teacher, navContr: UINavigationController)
+}
 
 // MARK: - ScheduleItemVM
 
@@ -20,11 +25,17 @@ public final class ScheduleItemVM: ScheduleItemViewModel {
         scheduleItem = item
     }
 
+    // MARK: Public
+
+    public let scheduleItem: ScheduleItem
+
+    public func showTeacherCard(_ teacher: Teacher, navContr: UINavigationController) {
+        Router.push(navContr: navContr, VCFactory.buildTeacherCardVC(teacher: teacher))
+    }
+
     // MARK: Private
 
     private let service: ScheduleService
-
-    private let scheduleItem: ScheduleItem
 
     private var subscriptions = Set<AnyCancellable>()
 }

@@ -10,4 +10,6 @@ public struct ScheduleItem: Decodable {
     public let description: String
     public let group: String
     public let week: String
+    public let tasks: [Task]
+    public let teacher: Teacher
 }

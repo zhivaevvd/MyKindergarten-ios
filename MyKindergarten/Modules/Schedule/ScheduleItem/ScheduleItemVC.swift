@@ -13,6 +13,7 @@ public final class ScheduleItemVC: UIViewController {
         self.vm = vm
         super.init(nibName: nil, bundle: nil)
         view.backgroundColor = .white
+        configureBindings()
     }
 
     @available(*, unavailable)
@@ -22,19 +23,27 @@ public final class ScheduleItemVC: UIViewController {
 
     override public func viewDidLoad() {
         super.viewDidLoad()
+        mainView.teacherDidTap = { [weak self] teacher in
+            guard let navContr = self?.navigationController else { return }
+            self?.vm.showTeacherCard(teacher, navContr: navContr)
+        }
     }
-    
-    public override func loadView() {
+
+    // MARK: Public
+
+    override public func loadView() {
         view = mainView
     }
 
     // MARK: Private
-    
+
     private let mainView = ScheduleItemView()
 
     private let vm: ScheduleItemViewModel
 
     private var subscriptions = Set<AnyCancellable>()
 
-    private func configureBindings() {}
+    private func configureBindings() {
+        mainView.model = vm.scheduleItem
+    }
 }

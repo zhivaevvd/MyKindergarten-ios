@@ -35,6 +35,7 @@ final class ProfileView: UIView {
         didSet {
             guard let user = user else { return }
 
+            avatarView.configureWithImage(sources: user.photos.map(\.url))
             nameView.setupView(user.name, user.phone)
             nameView.infoButton.setAction(for: .touchUpInside) { [weak self] in
                 self?.infoDidTap?()
@@ -52,11 +53,7 @@ final class ProfileView: UIView {
 
     // MARK: Private
 
-    private lazy var avatarView = UIImageView().configureWithAutoLayout {
-        $0.image = Asset.profilePlaceholder.image
-        $0.backgroundColor = Asset.grayScaleLightGray.color
-        $0.layer.cornerRadius = 8
-    }
+    private lazy var avatarView = ProfileAvatarView().prepareForAutoLayout()
 
     private lazy var containerView = UIView().prepareForAutoLayout()
 
