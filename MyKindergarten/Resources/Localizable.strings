@@ -30,6 +30,10 @@
 "common.invalidDate" = "Неверная дата";
 "common.close" = "Закрыть";
 "common.year" = "%@ год";
+"common.networkError.noInternet.title" = "Нет соединения";
+"common.networkError.noInternet.description" = "Проверьте свое подключение к сети и повторите попытку";
+"common.networkError.unknown.title" = "Неизвестная ошибка";
+"common.refresh" = "Обновить";
 
 "tabbar.schedule" = "Расписание";
 "tabbar.profile" = "Профиль";

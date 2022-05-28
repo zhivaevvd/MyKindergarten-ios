@@ -12,6 +12,7 @@ import UIKit
 public protocol ScheduleViewModel: AnyObject {
     var isLoading: AnyPublisher<Bool, Never> { get }
     var scheduleDataSource: AnyPublisher<[Schedule], Never> { get }
+    var placeholderTrigger: AnyPublisher<PlaceholderAction, Never> { get }
 
     func scheduleItemDidTap(at indexPath: IndexPath, navContr: UINavigationController)
     func refresh()
@@ -37,6 +38,10 @@ public final class ScheduleVM: ScheduleViewModel {
 
     public var scheduleDataSource: AnyPublisher<[Schedule], Never> {
         $_scheduleDataSource.eraseToAnyPublisher()
+    }
+    
+    public var placeholderTrigger: AnyPublisher<PlaceholderAction, Never> {
+        $_placeholderTrigger.eraseToAnyPublisher()
     }
 
     public func scheduleItemDidTap(at indexPath: IndexPath, navContr: UINavigationController) {
@@ -106,6 +111,9 @@ public final class ScheduleVM: ScheduleViewModel {
 
     @Published
     private var _scheduleDataSource: [Schedule] = []
+    
+    @Published
+    private var _placeholderTrigger: PlaceholderAction = .hide
 
     private func requestSchedule() {
         _isLoading = true
@@ -113,11 +121,18 @@ public final class ScheduleVM: ScheduleViewModel {
             switch result {
             case let .success(schedule):
                 self?._scheduleDataSource = schedule as! [Schedule]
+                self?._placeholderTrigger = .hide
             case let .failure(error):
                 if error.localizedDescription == L10n.Auth.noInternetError {
-                    Snack.noInternet()
+                   // Snack.noInternet()
+                    self?._placeholderTrigger = .show(.noInternetPlaceholder({ [weak self] in
+                        self?.requestSchedule()
+                    }))
                 } else {
-                    Snack.commonError()
+                   // Snack.commonError()
+                    self?._placeholderTrigger = .show(.unknownErrorPlaceholder({ [weak self] in
+                        self?.requestSchedule()
+                    }))
                 }
             }
             self?._isLoading = false

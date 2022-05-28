@@ -128,6 +128,14 @@
 		C2DC14552842AEE9000D0555 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DC14542842AEE9000D0555 /* Photo.swift */; };
 		C2DC14572842B363000D0555 /* TaskItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DC14562842B363000D0555 /* TaskItemView.swift */; };
 		C2DC145A2842C0A7000D0555 /* AchievementsItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DC14592842C0A7000D0555 /* AchievementsItemView.swift */; };
+		C2DC145F2842CADB000D0555 /* PlaceholderParameters+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DC145E2842CADB000D0555 /* PlaceholderParameters+Default.swift */; };
+		C2DC14612842CAEC000D0555 /* PlaceholderParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DC14602842CAEC000D0555 /* PlaceholderParameters.swift */; };
+		C2DC14632842CB03000D0555 /* PlaceholderBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DC14622842CB03000D0555 /* PlaceholderBehavior.swift */; };
+		C2DC14652842CB16000D0555 /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DC14642842CB16000D0555 /* PlaceholderView.swift */; };
+		C2DC14672842CB2F000D0555 /* PlaceholderAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DC14662842CB2F000D0555 /* PlaceholderAction.swift */; };
+		C2DC14692842CB50000D0555 /* Placeholderable+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DC14682842CB50000D0555 /* Placeholderable+UIView.swift */; };
+		C2DC146B2842CB69000D0555 /* Placeholderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DC146A2842CB69000D0555 /* Placeholderable.swift */; };
+		C2DC146D2842CB84000D0555 /* Placeholderable+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DC146C2842CB84000D0555 /* Placeholderable+UIViewController.swift */; };
 		C2E5AFE9282A92B7004AF5EF /* Snack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E5AFE8282A92B7004AF5EF /* Snack.swift */; };
 		C2E5AFEC282A9FE2004AF5EF /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E5AFEB282A9FE2004AF5EF /* ProfileView.swift */; };
 		C2E5AFEF282AA3F6004AF5EF /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E5AFEE282AA3F6004AF5EF /* Group.swift */; };
@@ -246,6 +254,14 @@
 		C2DC14542842AEE9000D0555 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		C2DC14562842B363000D0555 /* TaskItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItemView.swift; sourceTree = "<group>"; };
 		C2DC14592842C0A7000D0555 /* AchievementsItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsItemView.swift; sourceTree = "<group>"; };
+		C2DC145E2842CADB000D0555 /* PlaceholderParameters+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlaceholderParameters+Default.swift"; sourceTree = "<group>"; };
+		C2DC14602842CAEC000D0555 /* PlaceholderParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderParameters.swift; sourceTree = "<group>"; };
+		C2DC14622842CB03000D0555 /* PlaceholderBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderBehavior.swift; sourceTree = "<group>"; };
+		C2DC14642842CB16000D0555 /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
+		C2DC14662842CB2F000D0555 /* PlaceholderAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderAction.swift; sourceTree = "<group>"; };
+		C2DC14682842CB50000D0555 /* Placeholderable+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Placeholderable+UIView.swift"; sourceTree = "<group>"; };
+		C2DC146A2842CB69000D0555 /* Placeholderable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Placeholderable.swift; sourceTree = "<group>"; };
+		C2DC146C2842CB84000D0555 /* Placeholderable+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Placeholderable+UIViewController.swift"; sourceTree = "<group>"; };
 		C2E5AFE8282A92B7004AF5EF /* Snack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snack.swift; sourceTree = "<group>"; };
 		C2E5AFEB282A9FE2004AF5EF /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		C2E5AFEE282AA3F6004AF5EF /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
@@ -707,6 +723,7 @@
 		C2D38BB827E3E87A0020938F /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				C2DC145C2842CA99000D0555 /* Placeholder */,
 				C2DC145B2842C744000D0555 /* New Group */,
 				C2DC14512842AE3B000D0555 /* PageControl */,
 				C2DC144E2842ABCE000D0555 /* ProfileAvatarView */,
@@ -753,6 +770,29 @@
 			children = (
 			);
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		C2DC145C2842CA99000D0555 /* Placeholder */ = {
+			isa = PBXGroup;
+			children = (
+				C2DC145D2842CAC4000D0555 /* Configurable */,
+				C2DC14602842CAEC000D0555 /* PlaceholderParameters.swift */,
+				C2DC14622842CB03000D0555 /* PlaceholderBehavior.swift */,
+				C2DC14642842CB16000D0555 /* PlaceholderView.swift */,
+				C2DC14662842CB2F000D0555 /* PlaceholderAction.swift */,
+				C2DC14682842CB50000D0555 /* Placeholderable+UIView.swift */,
+				C2DC146A2842CB69000D0555 /* Placeholderable.swift */,
+				C2DC146C2842CB84000D0555 /* Placeholderable+UIViewController.swift */,
+			);
+			path = Placeholder;
+			sourceTree = "<group>";
+		};
+		C2DC145D2842CAC4000D0555 /* Configurable */ = {
+			isa = PBXGroup;
+			children = (
+				C2DC145E2842CADB000D0555 /* PlaceholderParameters+Default.swift */,
+			);
+			path = Configurable;
 			sourceTree = "<group>";
 		};
 		C2E5AFE7282A92A7004AF5EF /* Snack */ = {
@@ -891,6 +931,7 @@
 				C2843728282176110086A308 /* Validatable.swift in Sources */,
 				C2E5AFEF282AA3F6004AF5EF /* Group.swift in Sources */,
 				C2DC14552842AEE9000D0555 /* Photo.swift in Sources */,
+				C2DC14632842CB03000D0555 /* PlaceholderBehavior.swift in Sources */,
 				C2B35E082829980A00BF6AFB /* PasswordValidator.swift in Sources */,
 				C2B35E1E2829ADB400BF6AFB /* DefaultBottomSheetStyle.swift in Sources */,
 				C249AADD27F24D1500298572 /* ChatVC.swift in Sources */,
@@ -898,6 +939,7 @@
 				C2CD2A8E28427B7C00CADB9A /* TeacherCardView.swift in Sources */,
 				C284372B282176110086A308 /* MultilinedInputField.swift in Sources */,
 				C2B35E0B2829AAAA00BF6AFB /* ScrollableView.swift in Sources */,
+				C2DC14652842CB16000D0555 /* PlaceholderView.swift in Sources */,
 				C246813428202CAA003B7789 /* StyledButtonLoaderStyle.swift in Sources */,
 				C246813628202CD1003B7789 /* StyledButtonStateColor.swift in Sources */,
 				C2843724282176110086A308 /* InputFieldColorStyles.swift in Sources */,
@@ -936,6 +978,7 @@
 				C2843723282176110086A308 /* InputFieldUIProperties.swift in Sources */,
 				C284374328217BBA0086A308 /* String+Utilities.swift in Sources */,
 				C2B35E212829AF2A00BF6AFB /* NoAccessBottomSheet.swift in Sources */,
+				C2DC146D2842CB84000D0555 /* Placeholderable+UIViewController.swift in Sources */,
 				C2E5AFE9282A92B7004AF5EF /* Snack.swift in Sources */,
 				C2843729282176110086A308 /* TextField.swift in Sources */,
 				C2908F0E283B9A36004D86C6 /* ScheduleView.swift in Sources */,
@@ -950,9 +993,12 @@
 				C2A16070282009570038E9FD /* Strings.swift in Sources */,
 				C246813E28202D67003B7789 /* StyledButtonLoaderStyle+Default.swift in Sources */,
 				C249AAE427F24D9C00298572 /* ScheduleVM.swift in Sources */,
+				C2DC14612842CAEC000D0555 /* PlaceholderParameters.swift in Sources */,
 				C24680E7282017AC003B7789 /* Router.swift in Sources */,
+				C2DC145F2842CADB000D0555 /* PlaceholderParameters+Default.swift in Sources */,
 				C2B35E132829ABC900BF6AFB /* BottomSheetParameters.swift in Sources */,
 				C2B35E112829ABA700BF6AFB /* BottomSheetStyle.swift in Sources */,
+				C2DC14692842CB50000D0555 /* Placeholderable+UIView.swift in Sources */,
 				C2843733282176110086A308 /* PhoneMaskedDelegate.swift in Sources */,
 				C2843734282176110086A308 /* PhoneValidator.swift in Sources */,
 				C2DC14532842AE47000D0555 /* PageControl.swift in Sources */,
@@ -977,6 +1023,7 @@
 				C2DC145A2842C0A7000D0555 /* AchievementsItemView.swift in Sources */,
 				C2DC14572842B363000D0555 /* TaskItemView.swift in Sources */,
 				C2AA1611284036B9003AEF40 /* ScheduleItemView.swift in Sources */,
+				C2DC14672842CB2F000D0555 /* PlaceholderAction.swift in Sources */,
 				C246813A28202D14003B7789 /* UIButton+BackgroundColor.swift in Sources */,
 				C2843730282176110086A308 /* DateValidator.swift in Sources */,
 				C246813228202C8A003B7789 /* StyledButtonLoadable.swift in Sources */,
@@ -993,6 +1040,7 @@
 				C2E5AFEC282A9FE2004AF5EF /* ProfileView.swift in Sources */,
 				C249AADA27F24CB900298572 /* ProfileVM.swift in Sources */,
 				C249AAD227F2467900298572 /* VCFactory.swift in Sources */,
+				C2DC146B2842CB69000D0555 /* Placeholderable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
