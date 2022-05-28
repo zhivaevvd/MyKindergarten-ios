@@ -1,8 +1,6 @@
 //
-//  PlaceholderParameters+Default.swift
-//  MyKindergarten
-//
-//  Created by Headdds and hands on 29.05.2022.
+// My Kindergarten
+// Copyright © 2022 Vladislav Zhivaev HxH. All rights reserved.
 //
 
 import Foundation
@@ -17,7 +15,7 @@ public extension PlaceholderParameters {
             layout: .default
         )
     }
-    
+
     static func unknownErrorPlaceholder(_ buttonAction: (() -> Void)?) -> PlaceholderParameters {
         PlaceholderParameters(
             title: L10n.Common.NetworkError.Unknown.title,

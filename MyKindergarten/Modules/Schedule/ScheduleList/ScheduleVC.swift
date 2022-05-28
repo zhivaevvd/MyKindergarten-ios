@@ -65,18 +65,18 @@ public final class ScheduleVC: UIViewController {
         vm.isLoading.drive { [weak self] isLoading in
             isLoading ? self?.mainView.startLoading(with: .dark) : self?.mainView.stopLoadingProgress()
         }.store(in: &subscriptions)
-        
+
         vm.placeholderTrigger.drive { [weak self] action in
             guard let self = self else { return }
-            
+
             switch action {
             case let .show(parameters):
                 self.mainView.showPlaceholder(with: parameters.withLayout(.custom(layoutBuilder: { view in
                     view.safeArea {
                         $0.top()
                         $0.bottom(20)
-                        $0.left(16)
-                        $0.right(16)
+                        $0.left()
+                        $0.right()
                     }
                 })))
             case .hide:

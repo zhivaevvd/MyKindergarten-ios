@@ -39,7 +39,7 @@ public final class ScheduleVM: ScheduleViewModel {
     public var scheduleDataSource: AnyPublisher<[Schedule], Never> {
         $_scheduleDataSource.eraseToAnyPublisher()
     }
-    
+
     public var placeholderTrigger: AnyPublisher<PlaceholderAction, Never> {
         $_placeholderTrigger.eraseToAnyPublisher()
     }
@@ -111,7 +111,7 @@ public final class ScheduleVM: ScheduleViewModel {
 
     @Published
     private var _scheduleDataSource: [Schedule] = []
-    
+
     @Published
     private var _placeholderTrigger: PlaceholderAction = .hide
 
@@ -124,15 +124,13 @@ public final class ScheduleVM: ScheduleViewModel {
                 self?._placeholderTrigger = .hide
             case let .failure(error):
                 if error.localizedDescription == L10n.Auth.noInternetError {
-                   // Snack.noInternet()
-                    self?._placeholderTrigger = .show(.noInternetPlaceholder({ [weak self] in
+                    self?._placeholderTrigger = .show(.noInternetPlaceholder { [weak self] in
                         self?.requestSchedule()
-                    }))
+                    })
                 } else {
-                   // Snack.commonError()
-                    self?._placeholderTrigger = .show(.unknownErrorPlaceholder({ [weak self] in
+                    self?._placeholderTrigger = .show(.unknownErrorPlaceholder { [weak self] in
                         self?.requestSchedule()
-                    }))
+                    })
                 }
             }
             self?._isLoading = false

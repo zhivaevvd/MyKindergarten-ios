@@ -13,6 +13,7 @@ import UIKit
 public protocol ProfileViewModel: AnyObject {
     var isLoading: AnyPublisher<Bool, Never> { get }
     var user: AnyPublisher<User?, Never> { get }
+    var placeholderTrigger: AnyPublisher<PlaceholderAction, Never> { get }
 
     func showLogoutSheet(root: UIViewController)
     func showInfoSheet(root: UIViewController)
@@ -37,6 +38,10 @@ public final class ProfileVM: ProfileViewModel {
 
     public var isLoading: AnyPublisher<Bool, Never> {
         $_isLoading.eraseToAnyPublisher()
+    }
+
+    public var placeholderTrigger: AnyPublisher<PlaceholderAction, Never> {
+        $_placeholderTrigger.eraseToAnyPublisher()
     }
 
     public func showLogoutSheet(root: UIViewController) {
@@ -69,6 +74,9 @@ public final class ProfileVM: ProfileViewModel {
     @Published
     private var _isLoading = false
 
+    @Published
+    private var _placeholderTrigger: PlaceholderAction = .hide
+
     private func logout() {
         service.logout()
         dataService.appState.accessToken = nil
@@ -77,33 +85,23 @@ public final class ProfileVM: ProfileViewModel {
 
     private func getUser(id: String) {
         _isLoading = true
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            self.service.getUser(uid: id) { [weak self] result in
-                switch result {
-                case let .success(user):
-                    self?._user = user as? User
-                case let .failure(error):
-                    if error.localizedDescription == L10n.Auth.noInternetError {
-                        Snack.noInternet()
-                    } else {
-                        Snack.commonError()
-                    }
+        service.getUser(uid: id) { [weak self] result in
+            switch result {
+            case let .success(user):
+                self?._user = user as? User
+                self?._placeholderTrigger = .hide
+            case let .failure(error):
+                if error.localizedDescription == L10n.Auth.noInternetError {
+                    self?._placeholderTrigger = .show(.noInternetPlaceholder { [weak self] in
+                        self?.getUser(id: id)
+                    })
+                } else {
+                    self?._placeholderTrigger = .show(.unknownErrorPlaceholder { [weak self] in
+                        self?.getUser(id: id)
+                    })
                 }
-                self?._isLoading = false
             }
+            self?._isLoading = false
         }
-//        service.getUser(uid: id) { [weak self] result in
-//            switch result {
-//            case let .success(user):
-//                self?._user = user as? User
-//            case let .failure(error):
-//                if error.localizedDescription == L10n.Auth.noInternetError {
-//                    Snack.noInternet()
-//                } else {
-//                    Snack.commonError()
-//                }
-//            }
-//            self?._isLoading = false
-//        }
     }
 }

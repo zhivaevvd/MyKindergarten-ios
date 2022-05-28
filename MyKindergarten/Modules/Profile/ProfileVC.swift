@@ -79,6 +79,24 @@ public final class ProfileVC: UIViewController {
             isLoading ? (self?.mainView.loaderView.alpha = 1) : (self?.mainView.loaderView.alpha = 0)
             isLoading ? self?.mainView.loaderView.startLoading(with: .dark) : self?.mainView.loaderView.stopLoadingProgress()
         }.store(in: &subscriptions)
+
+        vm.placeholderTrigger.drive { [weak self] action in
+            guard let self = self else { return }
+
+            switch action {
+            case let .show(parameters):
+                self.view.showPlaceholder(with: parameters.withLayout(.custom(layoutBuilder: { view in
+                    view.safeArea {
+                        $0.top()
+                        $0.left()
+                        $0.right()
+                        $0.bottom(20)
+                    }
+                })))
+            case .hide:
+                self.view.hidePlaceholder()
+            }
+        }.store(in: &subscriptions)
     }
 
     private func configureActions() {
