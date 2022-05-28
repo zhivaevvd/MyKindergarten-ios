@@ -29,9 +29,29 @@
 "common.bdate" = "Дата рождения";
 "common.invalidDate" = "Неверная дата";
 "common.close" = "Закрыть";
+"common.year" = "%@ год";
+"common.networkError.noInternet.title" = "Нет соединения";
+"common.networkError.noInternet.description" = "Проверьте свое подключение к сети и повторите попытку";
+"common.networkError.unknown.title" = "Неизвестная ошибка";
+"common.refresh" = "Обновить";
 
 "tabbar.schedule" = "Расписание";
 "tabbar.profile" = "Профиль";
+
+"schedule.teacher" = "Воспитатель: %@";
+"schedule.group" = "Группа: %@";
+"schedule.week" = "Неделя: %@";
+"schedule.about" = "О направлении";
+"schedule.tasks" = "Задания";
+"schedule.education" = "Образование";
+"schedule.advancedTraining" = "Повышение квалификации";
+"schedule.achievments" = "Достижения";
+"schedule.position" = "Должность: %@";
+"schedule.experience" = "Опыт: %@ лет";
+"schedule.attestation" = "Аттестация: %@";
+"schedule.teacherTitle" = "Педагог";
+"schedule.showRecomendations" = "Посмотреть";
+"schedule.weekTheme" = "Тематика недели: %@";
 
 "groups.firstJun" = "Первая младшая";
 "groups.secondJun" = "Вторая младшая";

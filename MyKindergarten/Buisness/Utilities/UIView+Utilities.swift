@@ -15,8 +15,8 @@ public extension UIView {
     static func separator() -> UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .lightGray
-        view.heightAnchor.constraint(equalToConstant: 1.5).isActive = true
+        view.backgroundColor = Asset.grayScaleMediumGrey.color
+        view.heightAnchor.constraint(equalToConstant: 1).isActive = true
         return view
     }
 }

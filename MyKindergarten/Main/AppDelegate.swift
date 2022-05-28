@@ -20,7 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let initialVC: UIViewController? = dataService.appState.isUserAuthenticated ? VCFactory.buildTabBarVC() : VCFactory.buildAuthVC()
         window?.rootViewController = initialVC
         window?.makeKeyAndVisible()
-        // configureNavigationBar()
         return true
     }
 

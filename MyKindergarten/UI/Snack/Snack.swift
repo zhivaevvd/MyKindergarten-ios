@@ -19,8 +19,18 @@ public enum Snack {
         showSnack(snack)
     }
 
+    public static func noInternet() {
+        let snack = TTGSnackbar(message: L10n.Auth.noInterner, duration: .middle)
+        showSnack(snack)
+    }
+
     public static func commonError() {
         let snack = TTGSnackbar(message: "Произошла ошибка", duration: .middle)
+        showSnack(snack)
+    }
+
+    public static func weekNotChoosen() {
+        let snack = TTGSnackbar(message: "Неделя не выбрана", duration: .short)
         showSnack(snack)
     }
 

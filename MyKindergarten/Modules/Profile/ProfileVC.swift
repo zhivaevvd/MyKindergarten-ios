@@ -3,8 +3,11 @@
 // Copyright © 2022 Vladislav Zhivaev HxH. All rights reserved.
 //
 
+import AutoLayoutSugar
 import Combine
 import UIKit
+
+// MARK: - ProfileVC
 
 public final class ProfileVC: UIViewController {
     // MARK: Lifecycle
@@ -24,6 +27,22 @@ public final class ProfileVC: UIViewController {
 
     override public func viewDidLoad() {
         super.viewDidLoad()
+        mainView.scrollView.delegate = self
+    }
+
+    override public func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationItem.titleView = titleView
+        navigationDidAppear(appear: mainView.scrollView.contentOffset.y > mainView.avatarViewHeight * 0.69)
+    }
+
+    override public func viewDidDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
+        navigationController?.navigationBar.shadowImage = nil
+        navigationController?.navigationBar.tintColor = Asset.grayScaleBlack.color
     }
 
     // MARK: Public
@@ -34,6 +53,15 @@ public final class ProfileVC: UIViewController {
 
     // MARK: Private
 
+    private lazy var titleView = UIView().configureWithAutoLayout {
+        $0.addSubview(titleLabel)
+        titleLabel.centerX().centerY()
+    }
+
+    private lazy var titleLabel = Label(.body1Regular()).configureWithAutoLayout {
+        $0.compressionResistance(253, .horizontal)
+    }
+
     private let mainView = ProfileView()
 
     private let vm: ProfileViewModel
@@ -43,6 +71,31 @@ public final class ProfileVC: UIViewController {
     private func configureBindings() {
         vm.user.drive { [weak self] user in
             self?.mainView.user = user
+            self?.titleLabel.text = user?.name
+        }.store(in: &subscriptions)
+
+        vm.isLoading.drive { [weak self] isLoading in
+            self?.mainView.scrollView.isHidden = isLoading
+            isLoading ? (self?.mainView.loaderView.alpha = 1) : (self?.mainView.loaderView.alpha = 0)
+            isLoading ? self?.mainView.loaderView.startLoading(with: .dark) : self?.mainView.loaderView.stopLoadingProgress()
+        }.store(in: &subscriptions)
+
+        vm.placeholderTrigger.drive { [weak self] action in
+            guard let self = self else { return }
+
+            switch action {
+            case let .show(parameters):
+                self.view.showPlaceholder(with: parameters.withLayout(.custom(layoutBuilder: { view in
+                    view.safeArea {
+                        $0.top()
+                        $0.left()
+                        $0.right()
+                        $0.bottom(20)
+                    }
+                })))
+            case .hide:
+                self.view.hidePlaceholder()
+            }
         }.store(in: &subscriptions)
     }
 
@@ -56,5 +109,25 @@ public final class ProfileVC: UIViewController {
             guard let self = self else { return }
             self.vm.showInfoSheet(root: self)
         }
+    }
+
+    private func navigationDidAppear(appear: Bool) {
+        let newAlpha: CGFloat = appear ? 1.0 : 0.0
+        let navBarImage: UIImage? = appear ? nil : UIImage()
+
+        UIView.animate(withDuration: 0.16) { [weak self] in
+            guard let self = self else { return }
+            self.titleLabel.alpha = newAlpha
+            self.navigationController?.navigationBar.shadowImage = navBarImage
+            self.navigationController?.navigationBar.setBackgroundImage(navBarImage, for: .default)
+        }
+    }
+}
+
+// MARK: UIScrollViewDelegate
+
+extension ProfileVC: UIScrollViewDelegate {
+    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        navigationDidAppear(appear: scrollView.contentOffset.y > mainView.avatarViewHeight * 0.69)
     }
 }
