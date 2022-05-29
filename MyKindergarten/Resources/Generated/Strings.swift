@@ -153,6 +153,11 @@ public enum L10n {
             L10n.tr("Localizable", "schedule.group", String(describing: p1))
         }
 
+        /// Направление: %@
+        public static func itemTitle(_ p1: Any) -> String {
+            L10n.tr("Localizable", "schedule.itemTitle", String(describing: p1))
+        }
+
         /// Должность: %@
         public static func position(_ p1: Any) -> String {
             L10n.tr("Localizable", "schedule.position", String(describing: p1))

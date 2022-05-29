@@ -18,7 +18,7 @@ public class TabBarController: UITabBarController {
 
     private var profileVC: UIViewController = UINavigationController(rootViewController: VCFactory.buildProfileVC())
 
-    //private var chatVC: UIViewController = UINavigationController(rootViewController: VCFactory.buildChatVC())
+    // private var chatVC: UIViewController = UINavigationController(rootViewController: VCFactory.buildChatVC())
 
     private var scheduleVC: UIViewController = UINavigationController(rootViewController: VCFactory.buildScheduleVC())
 

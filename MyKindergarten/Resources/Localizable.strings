@@ -52,6 +52,7 @@
 "schedule.teacherTitle" = "Педагог";
 "schedule.showRecomendations" = "Посмотреть";
 "schedule.weekTheme" = "Тематика недели: %@";
+"schedule.itemTitle" = "Направление: %@";
 
 "groups.firstJun" = "Первая младшая";
 "groups.secondJun" = "Вторая младшая";

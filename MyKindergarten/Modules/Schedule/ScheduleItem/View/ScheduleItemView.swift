@@ -29,6 +29,7 @@ final class ScheduleItemView: UIView {
             guard let model = model else { return }
 
             aboutDescriptionLabel.text = model.description
+            titleLabel.text = L10n.Schedule.itemTitle(model.title)
             groupLabel.text = L10n.Schedule.group(model.group)
             weekLabel.text = L10n.Schedule.week(model.week)
             weekTheme.text = L10n.Schedule.weekTheme(model.weekTheme)
@@ -51,6 +52,8 @@ final class ScheduleItemView: UIView {
     private lazy var scrollView = UIScrollView().configureWithAutoLayout {
         $0.showsVerticalScrollIndicator = false
     }
+
+    private lazy var titleLabel = Label(.heading3Medium()).prepareForAutoLayout()
 
     private lazy var groupLabel = Label(.heading3Medium()).prepareForAutoLayout()
 
@@ -91,6 +94,7 @@ final class ScheduleItemView: UIView {
             .addSubviews([
                 aboutTitleLabel,
                 aboutDescriptionLabel,
+                titleLabel,
                 groupLabel,
                 weekLabel,
                 weekTheme,
@@ -110,7 +114,8 @@ final class ScheduleItemView: UIView {
         containerView.widthAnchor.constraint(equalTo: widthAnchor).priority(999).activate()
         aboutTitleLabel.left(16).right(16).top(16)
         aboutDescriptionLabel.left(16).right(16).top(to: .bottom(12), of: aboutTitleLabel)
-        groupLabel.left(16).right(16).top(to: .bottom(24), of: aboutDescriptionLabel)
+        titleLabel.top(to: .bottom(24), of: aboutDescriptionLabel).left(16).right(16)
+        groupLabel.left(16).right(16).top(to: .bottom(12), of: titleLabel)
         weekLabel.left(16).right(16).top(to: .bottom(12), of: groupLabel)
         weekTheme.left(16).right(16).top(to: .bottom(12), of: weekLabel)
         teacherLabel.top(to: .bottom(24), of: weekTheme).left(16).right(16)
