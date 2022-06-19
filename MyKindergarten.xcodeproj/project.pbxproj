@@ -108,6 +108,10 @@
 		C2B35E1B2829AD2A00BF6AFB /* KeyboardManager in Frameworks */ = {isa = PBXBuildFile; productRef = C2B35E1A2829AD2A00BF6AFB /* KeyboardManager */; };
 		C2B35E1E2829ADB400BF6AFB /* DefaultBottomSheetStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B35E1D2829ADB400BF6AFB /* DefaultBottomSheetStyle.swift */; };
 		C2B35E212829AF2A00BF6AFB /* NoAccessBottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B35E202829AF2A00BF6AFB /* NoAccessBottomSheet.swift */; };
+		C2BBD4DD285F71A0009D928B /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BBD4DC285F71A0009D928B /* ChatView.swift */; };
+		C2BBD4DF285F7275009D928B /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BBD4DE285F7275009D928B /* ChatCell.swift */; };
+		C2BBD4E1285F72F6009D928B /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BBD4E0285F72F6009D928B /* Chat.swift */; };
+		C2BBD4E4285F7328009D928B /* Sender.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BBD4E3285F7328009D928B /* Sender.swift */; };
 		C2CD2A85284269EC00CADB9A /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CD2A84284269EC00CADB9A /* Task.swift */; };
 		C2CD2A872842754E00CADB9A /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CD2A862842754E00CADB9A /* Teacher.swift */; };
 		C2CD2A89284276D500CADB9A /* Achievments.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CD2A88284276D500CADB9A /* Achievments.swift */; };
@@ -237,6 +241,10 @@
 		C2B35E172829AC2E00BF6AFB /* PresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
 		C2B35E1D2829ADB400BF6AFB /* DefaultBottomSheetStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultBottomSheetStyle.swift; sourceTree = "<group>"; };
 		C2B35E202829AF2A00BF6AFB /* NoAccessBottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoAccessBottomSheet.swift; sourceTree = "<group>"; };
+		C2BBD4DC285F71A0009D928B /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		C2BBD4DE285F7275009D928B /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
+		C2BBD4E0285F72F6009D928B /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		C2BBD4E3285F7328009D928B /* Sender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sender.swift; sourceTree = "<group>"; };
 		C2CD2A84284269EC00CADB9A /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		C2CD2A862842754E00CADB9A /* Teacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teacher.swift; sourceTree = "<group>"; };
 		C2CD2A88284276D500CADB9A /* Achievments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievments.swift; sourceTree = "<group>"; };
@@ -399,6 +407,7 @@
 		C249AADB27F24D0700298572 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				C2BBD4E5285F738F009D928B /* View */,
 				C249AADC27F24D1500298572 /* ChatVC.swift */,
 				C249AADE27F24D3A00298572 /* ChatVM.swift */,
 			);
@@ -418,6 +427,7 @@
 		C249AAE527F253F600298572 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C2BBD4E2285F731B009D928B /* Chat */,
 				C2AA160D28402756003AEF40 /* Schedule */,
 				C2E5AFED282AA37A004AF5EF /* Profile */,
 				C249AAE627F257A500298572 /* AppState.swift */,
@@ -690,6 +700,24 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		C2BBD4E2285F731B009D928B /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				C2BBD4E0285F72F6009D928B /* Chat.swift */,
+				C2BBD4E3285F7328009D928B /* Sender.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		C2BBD4E5285F738F009D928B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C2BBD4DC285F71A0009D928B /* ChatView.swift */,
+				C2BBD4DE285F7275009D928B /* ChatCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		C2CD2A8A28427AFB00CADB9A /* TeacherCard */ = {
 			isa = PBXGroup;
 			children = (
@@ -926,6 +954,7 @@
 			files = (
 				C2843737282176110086A308 /* InputFieldUIConfigurator.swift in Sources */,
 				C249AAFA27F2600A00298572 /* UIStackView+Utilities.swift in Sources */,
+				C2BBD4DD285F71A0009D928B /* ChatView.swift in Sources */,
 				C2DC144A2842A9E8000D0555 /* UIImageView+Extension.swift in Sources */,
 				C2908F12283B9FF5004D86C6 /* SceduleCell.swift in Sources */,
 				C2843728282176110086A308 /* Validatable.swift in Sources */,
@@ -936,6 +965,7 @@
 				C2B35E1E2829ADB400BF6AFB /* DefaultBottomSheetStyle.swift in Sources */,
 				C249AADD27F24D1500298572 /* ChatVC.swift in Sources */,
 				C249AAEC27F258D900298572 /* DataService.swift in Sources */,
+				C2BBD4E1285F72F6009D928B /* Chat.swift in Sources */,
 				C2CD2A8E28427B7C00CADB9A /* TeacherCardView.swift in Sources */,
 				C284372B282176110086A308 /* MultilinedInputField.swift in Sources */,
 				C2B35E0B2829AAAA00BF6AFB /* ScrollableView.swift in Sources */,
@@ -1011,6 +1041,7 @@
 				C2AA160F2840276D003AEF40 /* ScheduleItem.swift in Sources */,
 				C284372C282176110086A308 /* InputFieldState.swift in Sources */,
 				C2843732282176110086A308 /* PhoneField.swift in Sources */,
+				C2BBD4DF285F7275009D928B /* ChatCell.swift in Sources */,
 				C284372A282176110086A308 /* InputFieldColorStyle.swift in Sources */,
 				C2E5AFF5282AAA6C004AF5EF /* GroupView.swift in Sources */,
 				C2B35E182829AC2E00BF6AFB /* PresentationController.swift in Sources */,
@@ -1025,6 +1056,7 @@
 				C2AA1611284036B9003AEF40 /* ScheduleItemView.swift in Sources */,
 				C2DC14672842CB2F000D0555 /* PlaceholderAction.swift in Sources */,
 				C246813A28202D14003B7789 /* UIButton+BackgroundColor.swift in Sources */,
+				C2BBD4E4285F7328009D928B /* Sender.swift in Sources */,
 				C2843730282176110086A308 /* DateValidator.swift in Sources */,
 				C246813228202C8A003B7789 /* StyledButtonLoadable.swift in Sources */,
 				C249AAD527F24C5B00298572 /* TabBarController.swift in Sources */,

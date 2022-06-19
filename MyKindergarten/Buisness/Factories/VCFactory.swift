@@ -3,6 +3,8 @@
 // Copyright © 2022 Vladislav Zhivaev HxH. All rights reserved.
 //
 
+import Chatto
+import ChattoAdditions
 import UIKit
 
 enum VCFactory {
@@ -30,7 +32,8 @@ enum VCFactory {
     }
 
     static func buildChatVC() -> UIViewController {
-        let vc = ChatVC()
+        let vm: ChatViewModel = ChatVM()
+        let vc = ChatVC(vm: vm)
         return vc
     }
 

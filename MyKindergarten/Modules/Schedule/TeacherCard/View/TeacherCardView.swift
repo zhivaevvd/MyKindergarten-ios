@@ -27,6 +27,8 @@ final class TeacherCardView: UIView {
         $0.showsVerticalScrollIndicator = false
     }
 
+    private(set) lazy var chatButton = StyledButton(style: .lightGray44, title: "Написать").prepareForAutoLayout()
+
     var model: Teacher? {
         didSet {
             guard let model = model else { return }
@@ -111,12 +113,20 @@ final class TeacherCardView: UIView {
 
     private lazy var containerView = UIView().prepareForAutoLayout()
 
+    private lazy var nameView = UIView().configureWithAutoLayout {
+        $0.addSubviews([nameLabel, chatButton])
+        nameLabel.top().left().bottom()
+        nameLabel.compressionResistance(.defaultLow, .horizontal)
+        chatButton.left(to: .right(12), of: nameLabel).centerY().right()
+    }
+
     private func configureSubviews() {
         addSubview(scrollView)
         scrollView.addSubview(containerView)
         containerView.addSubviews([avatarView, contentStackView])
         contentStackView.addArrangedSubviews([
-            nameLabel,
+            nameView,
+            UIView.separator(),
             positionLabel,
             experienceLabel,
             attestationLabel,

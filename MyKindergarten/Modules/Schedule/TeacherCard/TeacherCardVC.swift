@@ -24,6 +24,9 @@ public final class TeacherCardVC: UIViewController {
         super.viewDidLoad()
         mainView.model = teacher
         mainView.scrollView.delegate = self
+        mainView.chatButton.setAction(for: .touchUpInside) {
+            Router.push(navContr: self.navigationController, VCFactory.buildChatVC())
+        }
     }
 
     override public func viewWillAppear(_ animated: Bool) {
